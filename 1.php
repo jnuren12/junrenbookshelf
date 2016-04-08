@@ -11,7 +11,6 @@ if($sql==false){
 } 
 else{
 	$res=mysql_fetch_array($sql);
-}
 ?>
 	<!doctype html>
 	<html>
@@ -77,31 +76,36 @@ else{
 	</ul>
 	<script type="text/javascript">
 	//映射内容
-	var sex = {1:'男', 2:'女'};
-	var degree = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
+	var status1 = {0:'已借出', 1:'可借阅'};
+	var type1 = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
 	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
 	var datas = new Array();
-	for(var i=0; i<186; i++){
-		var user = new Object();
-		user.user_id = 'user_'+i;
-		user.user_code = 'user_'+i;
-		user.user_name = '模拟用户'+(Math.floor(Math.random()*1000)+10000)+'号';
-		user.sex = (Math.floor(Math.random()*2)+1);
-		user.salary = (Math.floor(Math.random()*6000)+6000);
-		user.degree = (Math.floor(Math.random()*8)+1);
-		user.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
-		user.time_stamp_s = Math.floor((Math.floor(Math.random()*1096588800000)+315504000000)/1000);
-		user.time_stamp_ms = Math.floor(Math.random()*1096588800000)+315504000000;
-		user.string_date = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd');
-		user.string_time = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd hh:mm:ss');
-		datas.push(user);
-	}
+		<?php
+		 do{
+		?>
+		var book = new Object();
+		book.booknumber = <?php echo $res['booknumber'];?>;
+		book.bookname = <?php echo $res['bookname'];?>;
+		book.author = <?php echo $res['author'];?>;
+		book.book_name = '模拟用户'+(Math.floor(Math.random()*1000)+10000)+'号';
+		book.status1 = <?php echo $res['status'];?>;
+		book.type1 = (Math.floor(Math.random()*8)+1);
+		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
+		book.time_stamp_s = Math.floor((Math.floor(Math.random()*1096588800000)+315504000000)/1000);
+		book.time_stamp_ms = Math.floor(Math.random()*1096588800000)+315504000000;
+		book.string_date = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd');
+		book.string_time = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd hh:mm:ss');
+		datas.push(book);
+		<?php
+		   }while($res=mysql_fetch_array($sql));
+		 }
+		?>
 		var dtGridColumns_2_1_2 = [
-		{id:'user_code', title:'用户编号', type:'string', columnClass:'text-center'},
-		{id:'user_name', title:'用户名称', type:'string', columnClass:'text-center'},
-		{id:'sex', title:'性别', type:'string', codeTable:sex, columnClass:'text-center', hideType:'xs'},
-		{id:'salary', title:'薪水', type:'number', format:'#,###.00', columnClass:'text-center', hideType:'xs'},
-		{id:'degree', title:'学历', type:'string', codeTable:degree, columnClass:'text-center', hideType:'sm|xs'},
+		{id:'booknumber', title:'书号', type:'string', columnClass:'text-center'},
+		{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
+		{id:'author', title:'作者', type:'string', columnClass:'text-center'},
+		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'xs'},
+		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
 		{id:'time', title:'日期对象', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'md|sm|xs'},
 		{id:'time_stamp_s', title:'秒级时间戳', type:'date', format:'yyyy-MM-dd hh:mm:ss', otype:'time_stamp_s', columnClass:'text-center', hideType:'lg|md|sm|xs'},
 		{id:'time_stamp_ms', title:'毫秒级时间戳', type:'date', format:'yyyy-MM-dd hh:mm:ss S', otype:'time_stamp_ms', columnClass:'text-center', hideType:'lg|md|sm|xs'},
@@ -126,7 +130,7 @@ else{
 		});
 	</script>
 	<p><code>演示</code>：</p>
-	<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
-	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
+	<div id="dtGridContainer_2_1_2" class="dt-grid-container" style="color:#ffffff"></div>
+	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container" style="color:#ffffff"></div>
 </body>
 </html>
