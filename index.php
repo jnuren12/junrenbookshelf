@@ -59,7 +59,7 @@ a:hover, a:focus {
         <i> </i>
         <div class="s-bar">
             <form action="search.php" method="get">
-                <input type="text" name="bookname" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入书名';}">
+                <input type="text" name="bookname" onfocus="this.value = '请输入书名';" onblur="if (this.value == '') {this.value = '请输入书名';}">
                 <input type="submit"  value="查找"/>
             </form>
         </div>

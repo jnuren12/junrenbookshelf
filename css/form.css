@@ -1,6 +1,7 @@
 #log_wid {
   margin: 50px auto;
   width: 400px;
+  padding: 0;
 }
 #log_wid h2 {
   text-align: center;
