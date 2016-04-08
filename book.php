@@ -59,25 +59,25 @@ else{
 	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
-		<style type="text/css">
-			.menu > li{
-				width: 25%;
-			}
-			form{
-				padding: 0;
-				margin: 0 5px;
-				float: left;
-			}
-		</style>
-	</head>
-	<body>
-		<ul class="menu boxed clearfix">
-			<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
-			<li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
-			<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
-			<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
-		</ul>
-		<script type="text/javascript">
+	<style type="text/css">
+		.menu > li{
+			width: 25%;
+		}
+		form{
+			padding: 0;
+			margin: 0 5px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu boxed clearfix">
+		<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
+		<li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
+		<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
+		<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
+	</ul>
+	<script type="text/javascript">
 	//映射内容
 	var status1 = {0:'已借出', 1:'可借阅'};
 	var type1 = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
@@ -110,21 +110,19 @@ var dtGridColumns_2_1_2 = [
 	}
 	return content;
 }},
-{id:'operation', title:'操作', type:'string', columnClass:'text-center', hideType:'md|sm|xs',resolution:function(value, record, column, grid, dataNo, columnNo){
-	var content = '';
-	content += '
-	<button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>  编辑</button>';
-content += '    ';
-content += '
-<button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>  删除</button>
-';
-return content;
-}}
+{id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
+			 			var content = '';
+			 			content += '<button class="btn btn-xs btn-default" onclick="alert(\'编辑用户：'+record.book_name+'\');"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button>';
+			 			content += '&nbsp;&nbsp;';
+			 			content += '<button class="btn btn-xs btn-danger" onclick="alert(\'删除用户：'+record.book_name+'\');"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button>';
+			 			return content;
+			 		}}
+
 ];
 var dtGridOption_2_1_2 = {
 	lang : 'zh-cn',
 	ajaxLoad : false,
-	exportFileName : '用户列表',
+	exportFileName : '书籍列表',
 	datas : datas,
 	columns : dtGridColumns_2_1_2,
 	gridContainer : 'dtGridContainer_2_1_2',
