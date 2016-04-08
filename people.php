@@ -91,7 +91,7 @@ else{
 		book.status1 = ".$res['status'].";
 		book.phonenumber = '".$res['phonenumber']."';
 		book.roomnumber = '".$res['roomnumber']."';
-		book.time = ".$res['time'].";
+		book.time = $.fn.DtGrid.tools.dateFormat(".$res['time'].",'yyyy-MM-dd hh:mm:ss');
 		datas.push(book);
 		";
 	}while($res=mysql_fetch_array($sql));
