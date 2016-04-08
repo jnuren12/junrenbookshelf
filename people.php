@@ -96,16 +96,14 @@ else{
 		people.status1 = ".$res['status'].";
 		people.phonenumber = '".$res['phonenumber']."';
 		people.roomnumber = '".$res['roomnumber']."';
-		people.time = ".$res['time'].";
+		people.time = '".$res['time']."';
 		datas.push(people);
 		";
 	}while($res=mysql_fetch_array($sql));
 }
 ?>
 var dtGridColumns_2_1_2 = [
-
 {id:'studentname', title:'姓名', type:'string', columnClass:'text-center'},
-
 {id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'md|sm|xs'},
 {id:'studentnumber', title:'学号', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'phonenumber', title:'电话号码', type:'string', columnClass:'text-center', hideType:'sm|xs'},
