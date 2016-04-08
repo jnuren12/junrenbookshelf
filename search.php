@@ -2,7 +2,7 @@
 $keyword=$_GET["bookname"];
 include("connection.php");
 mysql_query("set names 'utf8'");
-if ($keyword == "")
+if ($keyword == " ")
 	$sql=mysql_query("SELECT * from book");  
 else
 	$sql=mysql_query("SELECT * from book where bookname like '%$keyword%'"); 
