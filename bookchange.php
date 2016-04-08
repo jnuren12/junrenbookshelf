@@ -27,6 +27,7 @@ body{
   background-image: url(https://getsharex.com/img/header_background.jpg);
   background-color: rgb(43,62,120);
   text-align:center;
+  overflow: hidden;
         }
 .menu > li{
     width: 25%;
@@ -43,7 +44,6 @@ input {
 #info_wid {
   margin: 50px auto;
   width: 400px;
-  overflow: hidden;
 }
 #info_wid h2 {
   text-align: center;
