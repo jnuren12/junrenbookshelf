@@ -8,8 +8,7 @@ header("Content-type: text/html; charset=utf-8");
     	}
     	else
     	{
-    		$conn=@mysql_connect("localhost","root","");
-    		mysql_select_db("bookshelf",$conn);
+    		include("connection.php");
     		$sql = "select username,password from admin where username = '$_POST[username]' and password = '$_POST[password]'";
     		$result = mysql_query($sql);
     		$num =mysql_num_rows($result);

@@ -12,8 +12,7 @@
         }
     	else
     	{
-    		$conn=@mysql_connect('localhost','root','');
-    		mysql_select_db('bookshelf',$conn);
+    		include("connection.php");
             $sql = mysql_query("UPDATE people SET studentname = '$studentname', studentnumber = '$studentnumber', roomnumber = '$roomnumber', phonenumber = '$phonenumber', booknumber = '$booknumber', status = '$status' WHERE booknumber = '$booknumber'");
             if($sql){
                 echo "<script>alert('保存成功');history.go(-1);</script>";

@@ -5,8 +5,7 @@ if(!isset($_COOKIE['username'])){
 else{
 	$username=$_COOKIE['username'];
 	$password=$_COOKIE['password'];
-	$conn=@mysql_connect('localhost','root','');
-	mysql_select_db('bookshelf',$conn);
+	include("connection.php");
 	$result=mysql_query("SELECT * FROM admin WHERE username='$username' AND password='$password'",$conn);
 	if(!$result)
 		header("Location: login.html");

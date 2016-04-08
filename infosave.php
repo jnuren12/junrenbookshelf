@@ -11,8 +11,7 @@
         }
     	else
     	{
-    		$conn=@mysql_connect('localhost','root','');
-    		mysql_select_db('bookshelf',$conn);
+    		include("connection.php");
             $sql = mysql_query("insert into people(studentame,studentnumber,roomnumber,phonenumber,booknumber,status) values('$name','$sdu','$dorm','$tel','$book','0')");//执行插入语句
             if($sql){
                 echo "<script>alert('保存成功');history.go(-1);</script>";

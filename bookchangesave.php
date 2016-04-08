@@ -11,8 +11,7 @@
         }
         else
         {
-            $conn=@mysql_connect('localhost','root','');
-            mysql_select_db('bookshelf',$conn);
+            include("connection.php");
             $rs = mysql_query("SELECT * from book WHERE booknumber = '$booknumber'");
             if (mysql_num_rows($rs) > 0){
                 $sql = mysql_query("UPDATE book SET bookname = '$bookname',author = '$author',booknumber = '$booknumber', type = '$type', status = '$status' WHERE booknumber = '$booknumber'");

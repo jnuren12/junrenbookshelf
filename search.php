@@ -1,7 +1,6 @@
 ﻿<?php 
          $keyword=$_GET["bookname"];
-		 $conn=@mysql_connect("127.0.0.1","root","");
-         mysql_select_db("bookshelf",$conn);
+		 include("connection.php");
          mysql_query("set names 'utf8'");
          if ($keyword == "")
          	$sql=mysql_query("SELECT * from book");  
