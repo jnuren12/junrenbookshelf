@@ -51,10 +51,6 @@ else{
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 
 	<style type="text/css">
-		body{
-			background-image: url(https://getsharex.com/img/header_background.jpg);
-			background-color: rgb(43,62,120);
-		}
 		.body-fluid{
 			width: auto;
 			height:500px;	
@@ -126,8 +122,8 @@ else{
 			grid_2_1_2.load();
 		});
 	</script>
-	<p><code>演示</code>：</p>
-	<div id="dtGridContainer_2_1_2" class="dt-grid-container" style="color:#ffffff"></div>
-	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container" style="color:#ffffff"></div>
+	<p>搜索结果：</p>
+	<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
+	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>
