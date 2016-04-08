@@ -38,25 +38,36 @@ else{
 		<link href="css/menu.css" media="screen" rel="stylesheet">
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
+		<!-- jQuery -->
+		<script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
+		<!-- bootstrap -->
+		<script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css" />
+<!--[if lt IE 9]>
+	<script src="../../../jss/dependents/bootstrap/plugins/ie/html5shiv.js"></script>
+	<script src="../../../jss/dependents/bootstrap/plugins/ie/respond.js"></script>
+	<![endif]-->
+<!--[if lt IE 8]>
+	<script src="../../../jss/dependents/bootstrap/plugins/ie/json2.js"></script>
+	<![endif]-->
+	<!-- font-awesome -->
+	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
+	<!-- dtGrid -->
+	<script type="text/javascript" src="../../../jss/jquery.dtGrid.js"></script>
+	<script type="text/javascript" src="../../../jss/i18n/en.js"></script>
+	<script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
+	<!-- datePicker -->
+	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
+	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
+	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 		<style type="text/css">
-			body{
-				background-image: url(https://getsharex.com/img/header_background.jpg);
-				background-color: rgb(43,62,120);
-			}
-			.body-fluid{
-				width: auto;
-				height:500px;				
-				color:#DCDCDC;
-				text-align:center;
-			}
 			.menu > li{
 				width: 25%;
 			}
-			footer{
-				background-image: url(https://getsharex.com/img/header_background.jpg);
-				background-size: auto;
-				padding: 5px 0;
-				text-align: center;
+			a:hover, a:focus {
+			color: #c9376e !important; 
+			text-decoration: none;
 			}
 		</style>
 	</head>
@@ -67,91 +78,69 @@ else{
 			<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
 			<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
 		</ul>
-		<div class="body-fluid">	
-			<table class="table table-bordered table-hover">
-				<thead>
-					<tr>
-						<th>姓名</th>
-						<th>学号</th>
-						<th>宿舍</th>
-						<th>电话</th>
-						<th>书号</th>
-						<th>时间</th>
-						<th>状态</th>
-						<th>管理</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php
-					do{
-						?>
-						<tr>
-							<td><?php echo $res['studentname'];?></td>
-							<td><?php echo $res['studentnumber'];?></td>
-							<td><?php echo $res['roomnumber'];?></td>
-							<td><?php echo $res['phonenumber'];?></td>
-							<td><?php echo $res['booknumber'];?></td>
-							<td><?php echo $res['time'];?></td>
-							<td><?php 
-								if ($res['status'] == 1)
-									echo "已还";
-								else
-									echo "未还";
-								?>
-							</td>
-							<td>
-							<form action="peopledel.php" method="post">
-								<input type="hidden" name="booknumber" value="<?php echo $res['booknumber'];?>"/>
-								<input class="btn" type="submit" name="del" value="删除">
-							</form>
-							<form action="peoplechange.php" method="post">
-								<input type="hidden" name="studentname" value="<?php echo $res['studentname'];?>"/>
-								<input type="hidden" name="studentnumber" value="<?php echo $res['studentnumber'];?>"/>
-								<input type="hidden" name="roomnumber" value="<?php echo $res['roomnumber'];?>"/>
-								<input type="hidden" name="phonenumber" value="<?php echo $res['phonenumber'];?>"/>
-								<input type="hidden" name="booknumber" value="<?php echo $res['booknumber'];?>"/>
-								<input type="hidden" name="status" value="<?php echo $res['status'];?>"/>
-								<input class="btn" type="submit" name="change" value="修改">
-							</form>
-							</td>
-						</tr>
-						<?php
-					}while($res=mysql_fetch_array($sql));
-				}
-				?>				
-			</tbody>
-		</table>
-		<div class="pagination pagination-centered">
-			<ul>
-				<li>
-					<a href="#">上一页</a>
-				</li>
-				<li>
-					<a href="#">1</a>
-				</li>
-				<li>
-					<a href="#">2</a>
-				</li>
-				<li>
-					<a href="#">3</a>
-				</li>
-				<li>
-					<a href="#">4</a>
-				</li>
-				<li>
-					<a href="#">5</a>
-				</li>
-				<li>
-					<a href="#">6</a>
-				</li>
-				<li>
-					<a href="#">下一页</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="wlsj.js"></script>
+		<script type="text/javascript">
+	//映射内容
+	var status1 = {0:'未归还', 1:'已归还'};
+	var datas = new Array();
+	<?php
+	do{
+		echo "var book = new Object();
+		book.booknumber = '".$res['booknumber']."';
+		book.studentname = '".$res['studentname']."';
+		book.studentnumber = '".$res['studentnumber']."';
+		book.status1 = ".$res['status'].";
+		book.phonenumber = '".$res['phonenumber']."';
+		book.roomnumber = '".$res['roomnumber']."';
+		book.time = '".$res['time']."';
+		datas.push(book);
+		";
+	}while($res=mysql_fetch_array($sql));
+}
+?>
+var dtGridColumns_2_1_2 = [
+{id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'md|sm|xs'},
+{id:'studentname', title:'姓名', type:'string', columnClass:'text-center'},
+{id:'studentnumber', title:'学号', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
+{id:'phonenumber', title:'电话号码', type:'string', codeTable:phonenumber, columnClass:'text-center', hideType:'sm|xs'},
+{id:'roomnumber', title:'宿舍', type:'string', codeTable:phonenumber, columnClass:'text-center', hideType:'sm|xs'},
+{id:'time', title:'借阅日期', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'xs'},
+{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
+	var content = '';
+	if(value==1){
+		content += '<span style="background:#00a2ca;padding:2px 10px;color:white;">已归还</span>';
+	}else{
+		content += '<span style="background:#c447ae;padding:2px 10px;color:white;">未归还</span>';
+	}
+	return content;
+}},
+{id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
+			 			var content = '';
+			 			content += '<form action="peoplechange.php" method="post"><input type="hidden" name="studentname" value="'+record.studentname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="studentnumber" value="'+record.studentnumber+'"/><input type="hidden" name="phonenumber" value="'+record.phonenumber+'"/><input type="hidden" name="roomnumber" value="'+record.roomnumber+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
+			 			content += '&nbsp;&nbsp;';
+			 			content += '<form action="peopledel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+			 			return content;
+			 		}}
+
+];
+var dtGridOption_2_1_2 = {
+	lang : 'zh-cn',
+	ajaxLoad : false,
+	exportFileName : '书籍列表',
+	datas : datas,
+	columns : dtGridColumns_2_1_2,
+	gridContainer : 'dtGridContainer_2_1_2',
+	toolbarContainer : 'dtGridToolBarContainer_2_1_2',
+	tools : '',
+	pageSize : 10,
+	pageSizeLimit : [10, 20, 50]
+};
+var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
+$(function(){
+	grid_2_1_2.load();
+});
+</script>
+<p><h4>搜索结果：<h4></p>
+<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
+<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>

@@ -10,7 +10,7 @@ else{
     if(!$result)
       header("Location: login.html");
 }
-if($_POST["change"]){
+if($_POST){
     $studentname=$_POST["studentname"];
     $studentnumber=$_POST["studentnumber"];
     $roomnumber=$_POST["roomnumber"];

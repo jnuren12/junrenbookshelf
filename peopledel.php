@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/html; charset=utf-8"); 
-if($_POST["del"]){
+if($_POST){
     $booknumber=$_POST["booknumber"];
     include("connection.php");
     $sql = mysql_query("DELETE from people where booknumber='$booknumber'");//执行插入语句

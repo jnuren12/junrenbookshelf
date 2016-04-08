@@ -11,7 +11,7 @@ if($sql==false){
 } 
 else{
 	$res=mysql_fetch_array($sql);
-?>
+	?>
 	<!doctype html>
 	<html>
 	<head>
@@ -57,6 +57,10 @@ else{
 			color:#DCDCDC;
 			text-align:center;
 		}
+		a:hover, a:focus {
+			color: #c9376e !important; 
+			text-decoration: none;
+		}
 		.menu > li{
 			width: 20%;
 		}
@@ -76,8 +80,8 @@ else{
 	var type1 = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
 	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
 	var datas = new Array();
-		<?php
-		 do{
+	<?php
+	do{
 		echo "var book = new Object();
 		book.booknumber = '".$res['booknumber']."';
 		book.bookname = '".$res['bookname']."';
@@ -85,15 +89,15 @@ else{
 		book.status1 = ".$res['status'].";
 		book.type1 = (Math.floor(Math.random()*8)+1);
 		datas.push(book);";
-		   }while($res=mysql_fetch_array($sql));
-		 }
-		?>
-		var dtGridColumns_2_1_2 = [
-		{id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'xs'},
-		{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
-		{id:'author', title:'作者', type:'string', columnClass:'text-center', hideType:'xs'},
-		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
-		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
+	}while($res=mysql_fetch_array($sql));
+}
+?>
+var dtGridColumns_2_1_2 = [
+{id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'xs'},
+{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
+{id:'author', title:'作者', type:'string', columnClass:'text-center', hideType:'xs'},
+{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
+{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
 	if(value==1){
 		content += '<span style="background:#00a2ca;padding:2px 10px;color:white;">可借阅</span>';
@@ -102,26 +106,26 @@ else{
 	}
 	return content;
 }}
-		];
-		var dtGridOption_2_1_2 = {
-			lang : 'zh-cn',
-			ajaxLoad : false,
-			exportFileName : '用户列表',
-			datas : datas,
-			columns : dtGridColumns_2_1_2,
-			gridContainer : 'dtGridContainer_2_1_2',
-			toolbarContainer : 'dtGridToolBarContainer_2_1_2',
-			tools : '',
-			pageSize : 10,
-			pageSizeLimit : [10, 20, 50]
-		};
-		var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
-		$(function(){
-			grid_2_1_2.load();
-		});
-	</script>
-	<p><h4>搜索结果：<h4></p>
-	<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
-	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
+];
+var dtGridOption_2_1_2 = {
+	lang : 'zh-cn',
+	ajaxLoad : false,
+	exportFileName : '用户列表',
+	datas : datas,
+	columns : dtGridColumns_2_1_2,
+	gridContainer : 'dtGridContainer_2_1_2',
+	toolbarContainer : 'dtGridToolBarContainer_2_1_2',
+	tools : '',
+	pageSize : 10,
+	pageSizeLimit : [10, 20, 50]
+};
+var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
+$(function(){
+	grid_2_1_2.load();
+});
+</script>
+<p><h4>搜索结果：<h4></p>
+<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
+<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>

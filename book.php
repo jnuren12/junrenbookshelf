@@ -63,10 +63,9 @@ else{
 		.menu > li{
 			width: 25%;
 		}
-		form{
-			padding: 0;
-			margin: 0 5px;
-			float: left;
+		a:hover, a:focus {
+			color: #c9376e !important; 
+			text-decoration: none;
 		}
 	</style>
 </head>
@@ -81,7 +80,6 @@ else{
 	//映射内容
 	var status1 = {0:'已借出', 1:'可借阅'};
 	var type1 = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
-	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
 	var datas = new Array();
 	<?php
 	do{
@@ -90,7 +88,7 @@ else{
 		book.bookname = '".$res['bookname']."';
 		book.author = '".$res['author']."';
 		book.status1 = ".$res['status'].";
-		book.type1 = (Math.floor(Math.random()*8)+1);
+		book.type1 = ".$res['type'].";
 		datas.push(book);
 		";
 	}while($res=mysql_fetch_array($sql));
@@ -114,7 +112,7 @@ var dtGridColumns_2_1_2 = [
 			 			var content = '';
 			 			content += '<form action="bookchange.php" method="post"><input type="hidden" name="bookname" value="'+record.bookname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="author" value="'+record.author+'"/><input type="hidden" name="type" value="'+record.type1.toString()+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
 			 			content += '&nbsp;&nbsp;';
-			 			content += '<form action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit" onclick="alert(\'确定删除书本'+record.book_name+'？\');"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+			 			content += '<form action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
 			 			return content;
 			 		}}
 
