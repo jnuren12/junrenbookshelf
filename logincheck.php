@@ -9,7 +9,7 @@ header("Content-type: text/html; charset=utf-8");
     	else
     	{
     		include("connection.php");
-    		$sql = "select username,password from admin where username = '$_POST[username]' and password = '$_POST[password]'";
+    		$sql = "SELECT username,password from admin where username = '$username' and password = '$password'";
     		$result = mysql_query($sql);
     		$num =mysql_num_rows($result);
     		if ($num)
