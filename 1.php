@@ -42,10 +42,10 @@ else{
 	<!-- font-awesome -->
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
 	<!-- dtGrid -->
-	<script type="text/javascript" src="../../../jquery.dtGrid.js"></script>
-	<script type="text/javascript" src="../../../i18n/en.js"></script>
-	<script type="text/javascript" src="../../../i18n/zh-cn.js"></script>
-	<link rel="stylesheet" type="text/css" href="../../../jquery.dtGrid.css" />
+	<script type="text/javascript" src="../../../jss/jquery.dtGrid.js"></script>
+	<script type="text/javascript" src="../../../jss/i18n/en.js"></script>
+	<script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
 	<!-- datePicker -->
 	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
