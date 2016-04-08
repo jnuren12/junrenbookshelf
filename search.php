@@ -93,7 +93,7 @@ else{
 		{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
 		{id:'author', title:'作者', type:'string', columnClass:'text-center', hideType:'xs'},
 		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
-		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'md|sm|xs'},
+		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'md|sm|xs'}
 		];
 		var dtGridOption_2_1_2 = {
 			lang : 'zh-cn',
