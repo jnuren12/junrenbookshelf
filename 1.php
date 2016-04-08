@@ -83,9 +83,9 @@ else{
 		<?php
 		 do{
 		 	echo "var book = new Object();
-		book.booknumber = ".$res['booknumber'].";
-		book.bookname = ".$res['bookname'].";
-		book.author = ".$res['author'].";
+		book.booknumber = '".$res['booknumber']."';
+		book.bookname = '".$res['bookname']."';
+		book.author = '".$res['author']."';
 		book.status1 = ".$res['status'].";
 		book.type1 = (Math.floor(Math.random()*8)+1);
 		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
