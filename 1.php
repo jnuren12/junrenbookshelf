@@ -82,21 +82,18 @@ else{
 	var datas = new Array();
 		<?php
 		 do{
-		?>
-		var book = new Object();
-		book.booknumber = <?php echo $res['booknumber'];?>;
-		book.bookname = <?php echo $res['bookname'];?>;
-		book.author = <?php echo $res['author'];?>;
-		book.book_name = '模拟用户'+(Math.floor(Math.random()*1000)+10000)+'号';
-		book.status1 = <?php echo $res['status'];?>;
+		 	echo "var book = new Object();
+		book.booknumber = ".$res['booknumber'].";
+		book.bookname = ".$res['bookname'].";
+		book.author = ".$res['author'].";
+		book.status1 = ".$res['status'].";
 		book.type1 = (Math.floor(Math.random()*8)+1);
 		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
 		book.time_stamp_s = Math.floor((Math.floor(Math.random()*1096588800000)+315504000000)/1000);
 		book.time_stamp_ms = Math.floor(Math.random()*1096588800000)+315504000000;
 		book.string_date = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd');
 		book.string_time = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd hh:mm:ss');
-		datas.push(book);
-		<?php
+		datas.push(book);";
 		   }while($res=mysql_fetch_array($sql));
 		 }
 		?>
