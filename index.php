@@ -40,16 +40,6 @@ a:hover, a:focus {
 .menu > li{
     width: 20%;
 }
-footer{
-  background-image: url(https://getsharex.com/img/header_background.jpg);
-  background-size: auto;
-  padding: 5px 0;
-  text-align: center;
-}
-footer p{
-  color:#DCDCDC;
-  font-family: "Microsoft YaHei" ! important;
-}
 </style>
 </head>
 <body>

@@ -47,16 +47,6 @@ else{
 			margin: 0;
 			padding: 0;
 		}
-		footer{
-			background-image: url(https://getsharex.com/img/header_background.jpg);
-			background-size: auto;
-			padding: 5px 0;
-			text-align: center;
-		}
-		footer p{
-			color:#DCDCDC;
-			font-family: "Microsoft YaHei" ! important;
-		}
 	</style>
 </head>
 <body>
@@ -65,8 +55,8 @@ else{
 			<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
 			<li><a href="#panel-784120" data-toggle="tab"><i class="menu-icon menu-icon-4"></i>书架管理</a></li>
 			<li><a href="#panel-280270" data-toggle="tab"><i class="menu-icon menu-icon-8"></i>借阅人管理</a></li>
-			<li><a href="info.php"><i class="menu-icon menu-icon-6"></i>借阅登记</a></li>
-			<li><a href="add.php"><i class="menu-icon menu-icon-6"></i>添加书籍</a></li>
+			<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
+			<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
 		</ul>
 	</div>
 	<div class="body-fluid">
@@ -96,13 +86,6 @@ else{
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row-fluid" style="margin:0px;">
-		<div class="col-xs-6 col-md-12" style="padding:0px;">
-			<footer>
-				<p>Copyright © 2016 WLKF Team</p>
-			</footer>
-		</div>  
 	</div>    
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
