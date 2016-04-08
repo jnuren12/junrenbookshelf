@@ -113,17 +113,17 @@ var dtGridColumns_2_1_2 = [
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', hideType:'md|sm|xs',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
 	content += '<form action="bookchange.php" method="post">
-	<input type="hidden" name="bookname" value="<?php echo $res["bookname"];?>"/>
-	<input type="hidden" name="booknumber" value="<?php echo $res["booknumber"];?>"/>
-	<input type="hidden" name="author" value="<?php echo $res["author"];?>"/>
-	<input type="hidden" name="type" value="<?php echo $res["type"];?>"/>
-	<input type="hidden" name="status" value="<?php echo $res["status"];?>"/>
+	<input type="hidden" name="bookname" value="'.$res["bookname"].'"/>
+	<input type="hidden" name="booknumber" value="'.$res["booknumber"].'"/>
+	<input type="hidden" name="author" value="'.$res["author"].'"/>
+	<input type="hidden" name="type" value="'.$res["type"].'"/>
+	<input type="hidden" name="status" value="'.$res["status"].'"/>
 	<button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>  编辑</button>
 </form>
 ';
 content += '  ';
 content += '<form action="bookdel.php" method="post">
-<input type="hidden" name="booknumber" value="<?php echo $res["booknumber"];?>"/>
+<input type="hidden" name="booknumber" value="'.$res["booknumber"].'"/>
 <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>  删除</button>
 </form>
 '
