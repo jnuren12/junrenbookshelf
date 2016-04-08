@@ -36,22 +36,32 @@ else{
 		<link href="css/menu.css" media="screen" rel="stylesheet">
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
+		<!-- jQuery -->
+		<script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
+		<!-- bootstrap -->
+		<script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css" />
+<!--[if lt IE 9]>
+	<script src="../../../jss/dependents/bootstrap/plugins/ie/html5shiv.js"></script>
+	<script src="../../../jss/dependents/bootstrap/plugins/ie/respond.js"></script>
+	<![endif]-->
+<!--[if lt IE 8]>
+	<script src="../../../jss/dependents/bootstrap/plugins/ie/json2.js"></script>
+	<![endif]-->
+	<!-- font-awesome -->
+	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
+	<!-- dtGrid -->
+	<script type="text/javascript" src="../../../jss/jquery.dtGrid.js"></script>
+	<script type="text/javascript" src="../../../jss/i18n/en.js"></script>
+	<script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
+	<!-- datePicker -->
+	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
+	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
+	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 		<style type="text/css">
-			body{
-				background-image: url(https://getsharex.com/img/header_background.jpg);
-				background-color: rgb(43,62,120);
-				width: auto;
-				margin: 0;
-				padding: 0;
-			}
 			.menu > li{
 				width: 25%;
-			}
-			.body-fluid{
-				width: auto;
-				height:500px;
-				color:#DCDCDC;			
-				text-align:center;
 			}
 			form{
 				padding: 0;
@@ -99,7 +109,7 @@ var dtGridColumns_2_1_2 = [
 	}
 	return content;
 }},
-{id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
+{id:'operation', title:'操作', type:'string', columnClass:'text-center', hideType:'md|sm|xs',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
 	content += '<form action="bookchange.php" method="post">
 	<input type="hidden" name="bookname" value="<?php echo $res["bookname"];?>"/>
@@ -136,7 +146,7 @@ $(function(){
 	grid_2_1_2.load();
 });
 </script>
-<p><h2>搜索结果：<h2></p>
+<p>搜索结果：</p>
 <div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>

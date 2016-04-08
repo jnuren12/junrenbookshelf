@@ -91,9 +91,9 @@ else{
 		var dtGridColumns_2_1_2 = [
 		{id:'booknumber', title:'书号', type:'string', columnClass:'text-center'},
 		{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
-		{id:'author', title:'作者', type:'string', columnClass:'text-center'},
-		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'xs'},
+		{id:'author', title:'作者', type:'string', columnClass:'text-center', hideType:'xs'},
 		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
+		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'md|sm|xs'},
 		];
 		var dtGridOption_2_1_2 = {
 			lang : 'zh-cn',
@@ -112,7 +112,7 @@ else{
 			grid_2_1_2.load();
 		});
 	</script>
-	<p><h2>搜索结果：<h2></p>
+	<p>搜索结果：</p>
 	<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
