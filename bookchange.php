@@ -16,6 +16,7 @@
 <head>
 <meta charset="utf-8">
 <title>书籍修改</title>
+<meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
 <link href="css/menu.css" media="screen" rel="stylesheet">
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
@@ -42,6 +43,7 @@ input {
 #info_wid {
   margin: 50px auto;
   width: 400px;
+  overflow: hidden;
 }
 #info_wid h2 {
   text-align: center;

@@ -24,6 +24,7 @@ if($_POST){
 <head>
     <meta charset="utf-8">
     <title>登记修改</title>
+    <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
     <link href="css/menu.css" media="screen" rel="stylesheet">
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -50,6 +51,7 @@ if($_POST){
   #info_wid {
       margin: 50px auto;
       width: 400px;
+      overflow: hidden;
   }
   #info_wid h2 {
       text-align: center;

@@ -2,6 +2,7 @@
   margin: 50px auto;
   width: 400px;
   padding: 0;
+  overflow: hidden;
 }
 #log_wid h2 {
   text-align: center;
