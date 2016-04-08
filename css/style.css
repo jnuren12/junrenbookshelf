@@ -103,7 +103,7 @@ body {
      -moz-transition: all 0.3s ease;
      -o-transition: all 0.3s ease;
 }
-.search i {
+/*.search i {
   background: url(../images/search.png)no-repeat;
   width: 31px;
   height: 31px;
@@ -112,7 +112,7 @@ body {
   top: 20%;
   left: 32.2%;
   cursor: pointer;
-}
+}*/
 .search p {
   font-size: 0.9em;
   font-weight: 400;
@@ -210,7 +210,7 @@ body {
 }
 @media(max-width:640px){
 .s-bar {
-  width: 65%;
+  width: 100%;
 }
 .search i {
   left: 15.5%;
@@ -223,12 +223,12 @@ body {
 }
 @media(max-width:568px){
 .s-bar input[type="text"] {
-  width: 64%;
+  width: 70%;
 }	
 }
 @media(max-width:480px){
 .s-bar input[type="text"] {
-  width: 55%;
+  width: 70%;
   font-size: 0.8em;	
 }
 .s-bar input[type="submit"] {
