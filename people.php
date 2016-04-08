@@ -100,8 +100,8 @@ var dtGridColumns_2_1_2 = [
 {id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'md|sm|xs'},
 {id:'studentname', title:'姓名', type:'string', columnClass:'text-center'},
 {id:'studentnumber', title:'学号', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
-{id:'phonenumber', title:'电话号码', type:'string', codeTable:phonenumber, columnClass:'text-center', hideType:'sm|xs'},
-{id:'roomnumber', title:'宿舍', type:'string', codeTable:phonenumber, columnClass:'text-center', hideType:'sm|xs'},
+{id:'phonenumber', title:'电话号码', type:'string', columnClass:'text-center', hideType:'sm|xs'},
+{id:'roomnumber', title:'宿舍', type:'string', columnClass:'text-center', hideType:'sm|xs'},
 {id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
 	if(value==1){
@@ -123,7 +123,7 @@ var dtGridColumns_2_1_2 = [
 var dtGridOption_2_1_2 = {
 	lang : 'zh-cn',
 	ajaxLoad : false,
-	exportFileName : '书籍列表',
+	exportFileName : '借阅人列表',
 	datas : datas,
 	columns : dtGridColumns_2_1_2,
 	gridContainer : 'dtGridContainer_2_1_2',
