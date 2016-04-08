@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
          $keyword=$_GET["bookname"];
 		 include("connection.php");
          mysql_query("set names 'utf8'");
@@ -26,6 +26,7 @@
 <link href="css/menu.css" media="screen" rel="stylesheet">
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="page.css">
 <style type="text/css">
 body{
 	background-image: url(https://getsharex.com/img/header_background.jpg);
@@ -40,6 +41,10 @@ body{
  .menu > li{
 				width: 20%;
 			}
+    .activP{
+      background-color: #367fa9!important;
+      color: #fff!important;
+    }
 </style>
 </head>
 <body>
@@ -94,32 +99,16 @@ body{
 				</tbody>
 			</table>
 			<div class="pagination pagination-centered">
-				<ul>
-					<li>
-						<a href="#">上一页</a>
-					</li>
-					<li>
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">2</a>
-					</li>
-					<li>
-						<a href="#">3</a>
-					</li>
-					<li>
-						<a href="#">4</a>
-					</li>
-					<li>
-						<a href="#">5</a>
-					</li>
-					<li>
-						<a href="#">6</a>
-					</li>
-					<li>
-						<a href="#">下一页</a>
-					</li>
-				</ul>
+				    <div class="pageTest"></div>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="page.js"></script>
+    <script type="text/javascript">
+    $('.pageTest').page({
+      leng: 66,//分页总数
+      activeClass: 'activP' , //active 类样式定义
+    })
+    </script>
 			</div>
 		</div>
 	</div>

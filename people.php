@@ -76,6 +76,7 @@ else{
 						<th>宿舍</th>
 						<th>电话</th>
 						<th>书号</th>
+						<th>时间</th>
 						<th>状态</th>
 						<th>管理</th>
 					</tr>
@@ -90,6 +91,7 @@ else{
 							<td><?php echo $res['roomnumber'];?></td>
 							<td><?php echo $res['phonenumber'];?></td>
 							<td><?php echo $res['booknumber'];?></td>
+							<td><?php echo $res['time'];?></td>
 							<td><?php 
 								if ($res['status'] == 1)
 									echo "已还";
