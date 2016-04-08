@@ -67,6 +67,11 @@ else{
 			color: #c9376e !important; 
 			text-decoration: none;
 		}
+		form{
+				padding: 0;
+				margin: 0 5px;
+				float: left;
+			}
 	</style>
 </head>
 <body>
