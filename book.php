@@ -116,8 +116,8 @@ var dtGridColumns_2_1_2 = [
 	<input type="hidden" name="bookname" value="'+record.bookname+'"/>
 	<input type="hidden" name="booknumber" value="'+record.booknumber+'"/>
 	<input type="hidden" name="author" value="'+record.author+'"/>
-	<input type="hidden" name="type" value="'+record.type1.toString()+'"/>
-	<input type="hidden" name="status" value="'+record.status1.toString()+'"/>
+	<input type="hidden" name="type" value="'+record.bookname+'"/>
+	<input type="hidden" name="status" value="'+record.bookname+'"/>
 	<button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>  编辑</button>
 </form>';
 content += '    ';
