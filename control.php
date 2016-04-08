@@ -70,7 +70,7 @@ else{
 							<input type="submit"  value="查找"/>
 						</form>
 					</div>
-					<p>输入" "查找全部</p>
+					<p>输入" "（空格）查找全部</p>
 				</div>
 			</div>
 			<div class="tab-pane" id="panel-280270">
@@ -82,7 +82,7 @@ else{
 							<input type="submit"  value="查找"/>
 						</form>
 					</div>
-					<p>输入" "查找全部</p>
+					<p>输入" "（空格）查找全部</p>
 				</div>
 			</div>
 		</div>
