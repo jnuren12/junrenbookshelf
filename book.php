@@ -112,9 +112,9 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 			 			var content = '';
-			 			content += '<button class="btn btn-xs btn-default" onclick="alert(\'编辑用户：'+record.book_name+'\');"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button>';
+			 			content += '<form action="bookchange.php" method="post"><input type="hidden" name="bookname" value="'+record.bookname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="author" value="'+record.author+'"/><input type="hidden" name="type" value="'+record.bookname+'"/><input type="hidden" name="status" value="'+record.bookname+'"/><button class="btn btn-xs btn-default" onclick="alert(\'编辑用户：'+record.book_name+'\');"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
 			 			content += '&nbsp;&nbsp;';
-			 			content += '<button class="btn btn-xs btn-danger" onclick="alert(\'删除用户：'+record.book_name+'\');"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button>';
+			 			content += '<form action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" onclick="alert(\'删除用户：'+record.book_name+'\');"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
 			 			return content;
 			 		}}
 
