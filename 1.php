@@ -83,13 +83,13 @@ else{
 		book.bookname = '".$res['bookname']."';
 		book.author = '".$res['author']."';
 		book.status1 = ".$res['status'].";
-		book.type1 = (Math.floor(Math.random()*8)+1);
-		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
+		book.type1 = (Math.floor(Math.random()*8)+1);";
+		/*book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
 		book.time_stamp_s = Math.floor((Math.floor(Math.random()*1096588800000)+315504000000)/1000);
 		book.time_stamp_ms = Math.floor(Math.random()*1096588800000)+315504000000;
 		book.string_date = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd');
 		book.string_time = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd hh:mm:ss');
-		datas.push(book);";
+		datas.push(book);"*/
 		   }while($res=mysql_fetch_array($sql));
 		 }
 		?>
@@ -99,11 +99,11 @@ else{
 		{id:'author', title:'作者', type:'string', columnClass:'text-center'},
 		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'xs'},
 		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
-		{id:'time', title:'日期对象', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'md|sm|xs'},
+		/*{id:'time', title:'日期对象', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'md|sm|xs'},
 		{id:'time_stamp_s', title:'秒级时间戳', type:'date', format:'yyyy-MM-dd hh:mm:ss', otype:'time_stamp_s', columnClass:'text-center', hideType:'lg|md|sm|xs'},
 		{id:'time_stamp_ms', title:'毫秒级时间戳', type:'date', format:'yyyy-MM-dd hh:mm:ss S', otype:'time_stamp_ms', columnClass:'text-center', hideType:'lg|md|sm|xs'},
 		{id:'string_date', title:'日期格式字符串', type:'date', format:'yyyy-MM-dd', otype:'string', oformat:'yyyy-MM-dd', columnClass:'text-center', hideType:'lg|md|sm|xs'},
-		{id:'string_time', title:'时间格式字符串', type:'date', format:'yyyy-MM-dd hh:mm:ss', otype:'string', oformat:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'lg|md|sm|xs'}
+		{id:'string_time', title:'时间格式字符串', type:'date', format:'yyyy-MM-dd hh:mm:ss', otype:'string', oformat:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'lg|md|sm|xs'}*/
 		];
 		var dtGridOption_2_1_2 = {
 			lang : 'zh-cn',
