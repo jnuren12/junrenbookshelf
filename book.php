@@ -146,7 +146,7 @@ $(function(){
 	grid_2_1_2.load();
 });
 </script>
-<p>搜索结果：</p>
+<p><h3>搜索结果：<h3></p>
 <div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
