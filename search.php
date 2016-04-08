@@ -89,11 +89,19 @@ else{
 		 }
 		?>
 		var dtGridColumns_2_1_2 = [
-		{id:'booknumber', title:'书号', type:'string', columnClass:'text-center'},
+		{id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'xs'},
 		{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
 		{id:'author', title:'作者', type:'string', columnClass:'text-center', hideType:'xs'},
 		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
-		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'md|sm|xs'}
+		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
+	var content = '';
+	if(value==1){
+		content += '<span style="background:#00a2ca;padding:2px 10px;color:white;">可借阅</span>';
+	}else{
+		content += '<span style="background:#c447ae;padding:2px 10px;color:white;">已借出</span>';
+	}
+	return content;
+}}
 		];
 		var dtGridOption_2_1_2 = {
 			lang : 'zh-cn',
@@ -112,7 +120,7 @@ else{
 			grid_2_1_2.load();
 		});
 	</script>
-	<p><h3>搜索结果：<h3></p>
+	<p><h4>搜索结果：<h4></p>
 	<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
