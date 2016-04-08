@@ -84,7 +84,8 @@ else{
 		book.author = '".$res['author']."';
 		book.status1 = ".$res['status'].";
 		book.type1 = (Math.floor(Math.random()*8)+1);
-		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);";
+		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
+		datas.push(book);";
 		   }while($res=mysql_fetch_array($sql));
 		 }
 		?>
