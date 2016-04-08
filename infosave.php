@@ -12,11 +12,12 @@
     	else
     	{
     		include("connection.php");
-            $sql = mysql_query("insert into people(studentname,studentnumber,roomnumber,phonenumber,booknumber,status) values('$name','$sdu','$dorm','$tel','$book','0')");//执行插入语句
+            $n = 0;
+            $sql = mysql_query("insert into people(studentname,studentnumber,roomnumber,phonenumber,booknumber,status) values('$name','$sdu','$dorm','$tel','$book','$n')");//执行插入语句
+            $sql = mysql_query("UPDATE book SET status = '$n' WHERE booknumber = '$book'");
             if($sql){
                 echo "<script>alert('保存成功');history.go(-1);</script>";
             }
-            $sql = mysql_query("UPDATE book SET status = '0' WHERE booknumber = '$book'");
         }
     }
 ?>

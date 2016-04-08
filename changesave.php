@@ -17,6 +17,8 @@
             if($sql){
                 echo "<script>alert('保存成功');history.go(-1);</script>";
             }
+            mysql_query("UPDATE book SET status = '$status' WHERE booknumber = '$booknumber'");
+            echo "<script>history.go(-1);</script>";
         }
     }
 ?>

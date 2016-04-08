@@ -97,7 +97,7 @@ else{
   <div class="header">
     <ul class="menu boxed clearfix">
       <li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
-      <li><a href="control.php" data-toggle="tab"><i class="menu-icon menu-icon-4"></i>管理</a></li>
+      <li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
       <li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
       <li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
   </ul>
