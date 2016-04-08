@@ -50,28 +50,6 @@ else{
 	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
-	<script type="text/javascript">
-	//映射内容
-	var sex = {1:'男', 2:'女'};
-	var degree = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
-	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
-	var datas = new Array();
-	for(var i=0; i<186; i++){
-		var user = new Object();
-		user.user_id = 'user_'+i;
-		user.user_code = 'user_'+i;
-		user.user_name = '模拟用户'+(Math.floor(Math.random()*1000)+10000)+'号';
-		user.sex = (Math.floor(Math.random()*2)+1);
-		user.salary = (Math.floor(Math.random()*6000)+6000);
-		user.degree = (Math.floor(Math.random()*8)+1);
-		user.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
-		user.time_stamp_s = Math.floor((Math.floor(Math.random()*1096588800000)+315504000000)/1000);
-		user.time_stamp_ms = Math.floor(Math.random()*1096588800000)+315504000000;
-		user.string_date = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd');
-		user.string_time = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd hh:mm:ss');
-		datas.push(user);
-	}
-	</script>
 
 	<style type="text/css">
 		body{
@@ -98,6 +76,26 @@ else{
 		<li><a href="#"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
 	</ul>
 	<script type="text/javascript">
+	//映射内容
+	var sex = {1:'男', 2:'女'};
+	var degree = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
+	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
+	var datas = new Array();
+	for(var i=0; i<186; i++){
+		var user = new Object();
+		user.user_id = 'user_'+i;
+		user.user_code = 'user_'+i;
+		user.user_name = '模拟用户'+(Math.floor(Math.random()*1000)+10000)+'号';
+		user.sex = (Math.floor(Math.random()*2)+1);
+		user.salary = (Math.floor(Math.random()*6000)+6000);
+		user.degree = (Math.floor(Math.random()*8)+1);
+		user.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
+		user.time_stamp_s = Math.floor((Math.floor(Math.random()*1096588800000)+315504000000)/1000);
+		user.time_stamp_ms = Math.floor(Math.random()*1096588800000)+315504000000;
+		user.string_date = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd');
+		user.string_time = $.fn.DtGrid.tools.dateFormat(new Date(Math.floor(Math.random()*1096588800000)+315504000000), 'yyyy-MM-dd hh:mm:ss');
+		datas.push(user);
+	}
 		var dtGridColumns_2_1_2 = [
 		{id:'user_code', title:'用户编号', type:'string', columnClass:'text-center'},
 		{id:'user_name', title:'用户名称', type:'string', columnClass:'text-center'},
