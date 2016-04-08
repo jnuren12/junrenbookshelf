@@ -14,10 +14,10 @@
   <script src="js/jquery-ui.min.js"></script>
   <style type="text/css">
     @viewport{
-       width: extend-to-zoom 100%;
-       zoom:1.0;
-   }/*等效于wlsj.html中meta/viewport声明*/
-   body{
+     width: extend-to-zoom 100%;
+     zoom:1.0;
+ }/*等效于wlsj.html中meta/viewport声明*/
+ body{
     background-image: url(https://getsharex.com/img/header_background.jpg);
     background-color: rgb(43,62,120);
 }
@@ -64,11 +64,11 @@ footer p{
   </div>
   <div class="body-fluid">
     <div class="container-fluid">
-       <h1>欢迎来到网联书架</h1>
-       <div class="search" style="margin:100px 0">
-          <i> </i>
-          <div class="s-bar">
-             <form action="search.php" method="get">
+     <h1>欢迎来到网联书架</h1>
+     <div class="search" style="margin:100px 0">
+        <i> </i>
+        <div class="s-bar">
+            <form action="search.php" method="get">
                 <input type="text" name="bookname" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入书名';}">
                 <input type="submit"  value="查找"/>
             </form>
@@ -76,14 +76,6 @@ footer p{
         <p></p>
     </div>
 </div>
-</div>
-<div class="row-fluid" style="margin:0px;">
-   <div class="col-xs-6 col-md-12" style="padding:0px;">
-      <footer>
-         <p>Copyright © 2016 WLKF Team</p>
-     </footer>
- </div>
-</div>    
 </div>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
