@@ -84,15 +84,14 @@ else{
 	var datas = new Array();
 	<?php
 	do{
-		echo "var book = new Object();
-		book.booknumber = '".$res['booknumber']."';
-		book.studentname = '".$res['studentname']."';
-		book.studentnumber = '".$res['studentnumber']."';
-		book.status1 = ".$res['status'].";
-		book.phonenumber = '".$res['phonenumber']."';
-		book.roomnumber = '".$res['roomnumber']."';
-		book.time = $.fn.DtGrid.tools.dateFormat(".$res['time'].",'yyyy-MM-dd hh:mm:ss');
-		datas.push(book);
+		echo "var people = new Object();
+		people.booknumber = '".$res['booknumber']."';
+		people.studentname = '".$res['studentname']."';
+		people.studentnumber = '".$res['studentnumber']."';
+		people.status1 = ".$res['status'].";
+		people.phonenumber = '".$res['phonenumber']."';
+		people.roomnumber = '".$res['roomnumber']."';
+		datas.push(people);
 		";
 	}while($res=mysql_fetch_array($sql));
 }
@@ -103,7 +102,6 @@ var dtGridColumns_2_1_2 = [
 {id:'studentnumber', title:'学号', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'phonenumber', title:'电话号码', type:'string', codeTable:phonenumber, columnClass:'text-center', hideType:'sm|xs'},
 {id:'roomnumber', title:'宿舍', type:'string', codeTable:phonenumber, columnClass:'text-center', hideType:'sm|xs'},
-{id:'time', title:'借阅日期', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'xs'},
 {id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
 	if(value==1){
