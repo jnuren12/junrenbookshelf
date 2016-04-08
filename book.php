@@ -112,19 +112,12 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', hideType:'md|sm|xs',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
-	content += '<form action="bookchange.php" method="post">
-	<input type="hidden" name="bookname" value="'+record.bookname+'"/>
-	<input type="hidden" name="booknumber" value="'+record.booknumber+'"/>
-	<input type="hidden" name="author" value="'+record.author+'"/>
-	<input type="hidden" name="type" value="'+record.bookname+'"/>
-	<input type="hidden" name="status" value="'+record.bookname+'"/>
-	<button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>  编辑</button>
-</form>';
+	content += '
+	<button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>  编辑</button>';
 content += '    ';
-content += '<form action="bookdel.php" method="post">
-<input type="hidden" name="booknumber" value="'+record.booknumber+'"/>
+content += '
 <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>  删除</button>
-</form>';
+';
 return content;
 }}
 ];
