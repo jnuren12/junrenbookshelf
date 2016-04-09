@@ -152,6 +152,7 @@ $(function(){
         <input class="info" type="submit"/ value="提交">
     </form>
 </div>
+<script src="js/jquery-1.10.2.min.js"></script>
 <script src="jss/trumbowyg/trumbowyg.js"></script>
 <script src="jss/trumbowyg/langs/fr.js"></script>
 <script src="jss/trumbowyg/plugins/upload/trumbowyg.upload.js"></script>
