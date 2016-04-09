@@ -21,9 +21,6 @@ else{
 		<!--保持页面原有尺寸，将页面调整为设备的可视浏览器空间-->
 		<meta name="author" content="LY">
 		<title>搜索结果</title>
-		<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
-		<!--<link rel="stylesheet" type="text/css" href="wlsj.css">-->
 		<link href="css/menu.css" media="screen" rel="stylesheet">
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
@@ -64,11 +61,6 @@ else{
 		}
 		.menu > li{
 			width: 20%;
-		}
-		.formname{
-			padding: 0;
-			margin: 0 5px;
-			float: left;
 		}
 	</style>
 </head>
