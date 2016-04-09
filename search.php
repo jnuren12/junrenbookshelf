@@ -91,7 +91,7 @@ else{
 		book.bookname = '".$res['bookname']."';
 		book.author = '".$res['author']."';
 		book.status1 = ".$res['status'].";
-		book.type1 = (Math.floor(Math.random()*8)+1);
+		book.type1 = ".$res['type'].";
 		datas.push(book);";
 	}while($res=mysql_fetch_array($sql));
 }
