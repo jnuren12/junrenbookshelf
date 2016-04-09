@@ -19,7 +19,7 @@ else{
     <!DOCTYPE html>
     <html>
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
         <title>评论<?php echo $_GET["booknumber"];?></title>
         <link href="css/menu.css" media="screen" rel="stylesheet">
         <link rel="stylesheet" href="jss/trumbowyg/design/css/trumbowyg.css">
