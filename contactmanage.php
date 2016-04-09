@@ -111,8 +111,8 @@ else{
     <?php
     do{
         echo "var comment = new Object();
-        comment.username = '".$username."';
-        comment.email = '".$email."';
+        comment.username = '".$res['username']."';
+        comment.email = '".$res['email']."';
         comment.comment = '".$res['comment']."';
         comment.time = '".$res['time']."';
         datas.push(comment);
