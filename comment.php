@@ -148,11 +148,11 @@ $(function(){
     <form action="commentsave.php" method="post">
         <input type="hidden" name="booknumber" value="<?php echo $_GET["booknumber"];?>">
         <textarea id="form-content" class="editor" name="comment" cols="30" rows="10">
+        我要评价
         </textarea>
         <input class="info" type="submit"/ value="提交">
     </form>
 </div>
-<script src="js/jquery-1.10.2.min.js"></script>
 <script src="jss/trumbowyg/trumbowyg.js"></script>
 <script src="jss/trumbowyg/langs/fr.js"></script>
 <script src="jss/trumbowyg/plugins/upload/trumbowyg.upload.js"></script>

@@ -1,121 +1,148 @@
-<?php 
-$keyword=$_GET["bookname"];
-include("connection.php");
-mysql_query("set names 'utf8'");
-if ($keyword == "")
-	$sql=mysql_query("SELECT * from book");  
-else
-	$sql=mysql_query("SELECT * from book where bookname like '%$keyword%'"); 
-if($sql==false){
-	echo "<script>alert('亲……臣妾找不到啊……换个关键词试试呗~~');history.go(-1);</script>";
-} 
-else{
-	$res=mysql_fetch_array($sql);
-?>
-	<!doctype html>
-	<html>
-	<head>
-		<meta charset="utf-8"> 
-		<meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
-		<!--保持页面原有尺寸，将页面调整为设备的可视浏览器空间-->
-		<meta name="author" content="LY">
-		<title>搜索结果</title>
-		<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
-		<!--<link rel="stylesheet" type="text/css" href="wlsj.css">-->
-		<link href="css/menu.css" media="screen" rel="stylesheet">
-		<script src="js/jquery-1.10.2.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<!-- jQuery -->
-		<script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
-		<!-- bootstrap -->
-		<script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css" />
-<!--[if lt IE 9]>
-	<script src="../../../jss/dependents/bootstrap/plugins/ie/html5shiv.js"></script>
-	<script src="../../../jss/dependents/bootstrap/plugins/ie/respond.js"></script>
-	<![endif]-->
-<!--[if lt IE 8]>
-	<script src="../../../jss/dependents/bootstrap/plugins/ie/json2.js"></script>
-	<![endif]-->
-	<!-- font-awesome -->
-	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
-	<!-- dtGrid -->
-	<script type="text/javascript" src="../../../jss/jquery.dtGrid.js"></script>
-	<script type="text/javascript" src="../../../jss/i18n/en.js"></script>
-	<script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
-	<link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
-	<!-- datePicker -->
-	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
-	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
-	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trumbowyg by Alex-D</title>
+        <link rel="stylesheet" href="jss/trumbowyg/design/css/trumbowyg.css">
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: #F2F2F2;
+                font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+            }
+            header {
+                text-align: center;
+            }
+            #main {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main" role="main">
+            <header>
+                <h1>Examples of use Trumbowyg</h1>
 
-	<style type="text/css">
-		.body-fluid{
-			width: auto;
-			height:500px;	
-			color:#DCDCDC;
-			text-align:center;
-		}
-		.menu > li{
-			width: 20%;
-		}
-	</style>
-</head>
-<body>
-	<ul class="menu boxed clearfix">
-		<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
-		<li><a href="search.php?bookname=&search=查找"><i class="menu-icon menu-icon-5"></i>书架</a></li>
-		<li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
-		<li><a href="login.html"><i class="menu-icon menu-icon-8"></i>管理员登录</a></li>
-		<li><a href="#"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
-	</ul>
-	<script type="text/javascript">
-	//映射内容
-	var status1 = {0:'已借出', 1:'可借阅'};
-	var type1 = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
-	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
-	var datas = new Array();
-		<?php
-		 do{
-		 	echo "var book = new Object();
-		book.booknumber = '".$res['booknumber']."';
-		book.bookname = '".$res['bookname']."';
-		book.author = '".$res['author']."';
-		book.status1 = ".$res['status'].";
-		book.type1 = (Math.floor(Math.random()*8)+1);
-		book.time = new Date(Math.floor(Math.random()*1096588800000)+315504000000);
-		datas.push(book);";
-		   }while($res=mysql_fetch_array($sql));
-		 }
-		?>
-		var dtGridColumns_2_1_2 = [
-		{id:'booknumber', title:'书号', type:'string', columnClass:'text-center'},
-		{id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
-		{id:'author', title:'作者', type:'string', columnClass:'text-center'},
-		{id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', hideType:'xs'},
-		{id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
-		{id:'time', title:'日期对象', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center', hideType:'md|sm|xs'}
-		];
-		var dtGridOption_2_1_2 = {
-			lang : 'zh-cn',
-			ajaxLoad : false,
-			exportFileName : '用户列表',
-			datas : datas,
-			columns : dtGridColumns_2_1_2,
-			gridContainer : 'dtGridContainer_2_1_2',
-			toolbarContainer : 'dtGridToolBarContainer_2_1_2',
-			tools : '',
-			pageSize : 10,
-			pageSizeLimit : [10, 20, 50]
-		};
-		var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
-		$(function(){
-			grid_2_1_2.load();
-		});
-	</script>
-	<p><h2>搜索结果：<h2></p>
-	<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
-	<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
-</body>
+                <p>
+                    Close an editor on clic on "Close" in top right corner. <br>
+                    To reopen an editor, double-click on his text.
+                </p>
+            </header>
+
+            <form action="#">
+                <div id="simple-editor">
+                    <h2>This editor is the default build of Trumbowyg.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident optio nam reiciendis eius beatae quibusdam!
+                    </p>
+                    <p>
+                        The text is derived from Cicero's De Finibus Bonorum et Malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil ). The original passage began: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit (Translation: &quot;Neither is there anyone who loves grief itself since it is grief and thus wants to obtain it&quot;).
+                    </p>
+                </div>
+
+                <div id="customized-buttonpane" class="editor">
+                    <h2>This is a demo of Trumbowyg with a customized button pane</h2>
+                    <p>
+                        The text is derived from Cicero's De Finibus Bonorum et Malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil ). The original passage began: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit (Translation: &quot;Neither is there anyone who loves grief itself since it is grief and thus wants to obtain it&quot;).
+                    </p>
+                    <p style="text-align: center;">
+                        <img src="http://alex-d.github.com/Trumbowyg/img/html5.png" alt="Blabla dans le alt">
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, minima, asperiores libero architecto sequi fugit dolore sunt in officiis facere ut quaerat ullam laudantium delectus aliquam tenetur alias! Ea, nisi, est earum temporibus dolores quas qui repellendus aliquid voluptatibus tempore facilis eligendi omnis reiciendis nihil ullam quo dolorem nam deleniti. Fugit dignissimos dolorum dolore voluptate repudiandae recusandae debitis. Neque, adipisci, maiores magni aliquam molestiae ex natus minus quod tempora nemo debitis eum laboriosam voluptatum ut architecto animi nobis vero quis dolore eaque! Corporis, dolore, illum, autem in eum ea doloribus ut consequuntur modi et ullam adipisci blanditiis corrupti ab voluptate.
+                    </p>
+                    <p>
+                        It is not known exactly when the text acquired its current standard form; it may have been as late as the 1960s. The passage was discovered by Richard McClintock, a Latin scholar who is the publications director at Hampden-Sydney College in Virginia, by searching for citings of the rarely used word 'consectetur' in classical literature.
+                    </p>
+                </div>
+
+                <textarea id="form-content" class="editor" cols="30" rows="10">
+                    <h1>This editor is create from a textarea</h1>
+                    <p>
+                        Even though using &quot;lorem ipsum&quot; often arouses curiosity due to its resemblance to classical Latin, it is not intended to have meaning. Where text is visible in a document, people tend to focus on the textual content rather than upon overall presentation, so publishers use lorem ipsum when displaying a typeface or design in order to direct the focus to presentation. &quot;Lorem ipsum&quot; also approximates a typical distribution of spaces in English. <br>
+                        The most common lorem ipsum text reads as follows: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </textarea>
+            </form>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="jss/trumbowyg/trumbowyg.js"></script>
+        <script src="jss/trumbowyg/langs/fr.js"></script>
+        <script src="jss/trumbowyg/plugins/upload/trumbowyg.upload.js"></script>
+        <script src="jss/trumbowyg/plugins/base64/trumbowyg.base64.js"></script>
+        <script>
+            /** Default editor configuration **/
+            $('#simple-editor').trumbowyg();
+
+
+
+            /********************************************************
+             * Customized button pane + buttons groups + dropdowns
+             * Use upload plugin
+             *******************************************************/
+
+            /*
+             * Add your own groups of button
+             */
+            $.trumbowyg.btnsGrps.test = ['bold', 'link'];
+
+            /* Add new words for customs btnsDef just below */
+            $.extend(true, $.trumbowyg.langs, {
+                fr: {
+                    align: 'Alignement',
+                    image: 'Image'
+                }
+            });
+            $('#customized-buttonpane').trumbowyg({
+                lang: 'fr',
+                closable: true,
+                fixedBtnPane: true,
+                btnsDef: {
+                    // Customizables dropdowns
+                    align: {
+                        dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                        ico: 'justifyLeft'
+                    },
+                    image: {
+                        dropdown: ['insertImage', 'upload', 'base64'],
+                        ico: 'insertImage'
+                    }
+                },
+                btns: ['viewHTML',
+                    '|', 'formatting',
+                    '|', 'btnGrp-test',
+                    '|', 'align',
+                    '|', 'btnGrp-lists',
+                    '|', 'image']
+            });
+
+
+
+            /** Simple customization with current options **/
+            $('#form-content').trumbowyg({
+                lang: 'fr',
+                closable: true,
+                mobile: true,
+                fixedBtnPane: true,
+                fixedFullWidth: true,
+                semantic: true,
+                resetCss: true,
+                autoAjustHeight: true,
+                autogrow: true
+            });
+
+
+
+
+            $('.editor').on('dblclick', function(e){
+                $(this).trumbowyg({
+                    lang: 'fr',
+                    closable: true,
+                    fixedBtnPane: true
+                });
+            });
+        </script>
+    </body>
 </html>
