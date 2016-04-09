@@ -102,7 +102,7 @@ else{
           <li><a href="search.php?bookname= &search=查找"><i class="menu-icon menu-icon-5"></i>书架</a></li>
           <li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
           <li><a href="login.html"><i class="menu-icon menu-icon-8"></i>登录</a></li>
-          <li><a href="#"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
+          <li><a href="contact.php"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
       </ul>
   </div>
   <script type="text/javascript">
