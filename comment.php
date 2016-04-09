@@ -1,7 +1,7 @@
 <?php
 $booknumber = $_GET["booknumber"];
 include("connection.php");
-$bookname = mysql_query("SELECT bookname from book where booknumber='$booknumber'")[0];
+$sql = mysql_query("SELECT bookname from book where booknumber='$booknumber'");
 $res=mysql_fetch_array($sql);
 do{
     $bookname = $res["bookname"];
@@ -83,7 +83,7 @@ else{
           padding: 4px 4px;
           width: 120px;
           height: 40px;
-          margin: 10px 0 20px 0;
+          margin: 10px 0 20px 20px;
           cursor:pointer;
           line-height: 1.5em;
           -webkit-border-radius: 3px;
