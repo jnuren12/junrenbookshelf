@@ -12,9 +12,8 @@ else{
 }
 include("inputfilter.php");
 $keyword=_safe($_GET["booknumber"]);
-echo "jlkjiluret".$keyword."jlkjtjoiut";
 include("connection.php");
-if ($keyword == " ")
+if ($keyword == "")
 	$sql=mysql_query("SELECT * from book");  
 else
 	$sql=mysql_query("SELECT * from book where booknumber='$keyword'");
