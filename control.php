@@ -40,7 +40,7 @@ else{
 			text-decoration: none;
 		}
 		.menu > li{
-			width: 20%;
+			width: 16.6666666666%;
 		}
 		.body-fluid{
 			width: auto;
