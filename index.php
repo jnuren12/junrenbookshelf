@@ -14,31 +14,31 @@
   <script src="js/jquery-ui.min.js"></script>
   <style type="text/css">
     @viewport{
-       width: extend-to-zoom 100%;
-       zoom:1.0;
+     width: extend-to-zoom 100%;
+     zoom:1.0;
    }/*等效于wlsj.html中meta/viewport声明*/
    body{
     background-image: url(images/5.jpg);
-}
-.body-fluid{
+  }
+  .body-fluid{
     width: auto;
     height: 498px;
     text-align:center;
-}
-.body-fluid h1{
+  }
+  .body-fluid h1{
     color:#DCDCDC;
     font-family: "Microsoft YaHei" ! important;
     font-size: 72px;
     position: relative;
     top: 40px;
-}
-a:hover, a:focus {
+  }
+  a:hover, a:focus {
     color: #c9376e !important; 
     text-decoration: none;
-}
-.menu > li{
+  }
+  .menu > li{
     width: 20%;
-}
+  }
 </style>
 </head>
 <body>
@@ -49,22 +49,22 @@ a:hover, a:focus {
       <li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
       <li><a href="login.html"><i class="menu-icon menu-icon-8"></i>登录</a></li>
       <li><a href="contact.php"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
-  </ul>
-</div>
-<div class="body-fluid">
+    </ul>
+  </div>
+  <div class="body-fluid">
     <div class="container-fluid">
-       <h1>欢迎来到网联书架</h1>
-       <div class="search" style="margin:100px 0">
-          <i> </i>
-          <div class="s-bar">
-            <form action="search.php" method="get">
-              <input type="text" name="bookname"  placeholder="请输入书名" onBlur="if(this.placeholder=='')this.placeholder='请输入书名'" onFocus="if(this.placeholder=='请输入书名')this.placeholder=''">
-              <input type="submit"  value="查找"/>
-          </form>
+     <h1>欢迎来到网联书架</h1>
+     <div class="search" style="margin:100px 0">
+      <i> </i>
+      <div class="s-bar">
+        <form action="search.php" method="get">
+          <input type="text" name="bookname"  value="请输入书名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入书名';}">
+          <input type="submit"  value="查找"/>
+        </form>
       </div>
       <p>输入" "（空格）查找全部</p>
+    </div>
   </div>
-</div>
 </div>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
