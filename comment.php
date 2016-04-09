@@ -73,11 +73,9 @@ else{
           font-weight: inherit;
           line-height: inherit;
           -webkit-appearance: none;
-          background-color: #fff;
           -webkit-border-radius: 0 0 20px 20px;
           -moz-border-radius: 0 0 20px 20px;
           border-radius: 0 0 20px 20px;
-          padding: 20px 26px;
           background-color: rgb(51,136,255);
           font-size: 20px;
           color: #fff;
@@ -85,7 +83,7 @@ else{
           padding: 4px 4px;
           width: 120px;
           height: 40px;
-          margin: 10px auto;
+          margin: 10px 0 20px 0;
           cursor:pointer;
           line-height: 1.5em;
           -webkit-border-radius: 3px;
@@ -147,10 +145,10 @@ $(function(){
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 <div id="main" role="main">
     <form action="commentsave.php" method="post">
-        <input class="info" type="submit"/ value="提交">
         <input type="hidden" name="booknumber" value="<?php echo $_GET["booknumber"];?>">
         <textarea id="form-content" class="editor" name="comment" cols="30" rows="10">
         </textarea>
+        <input class="info" type="submit"/ value="提交">
     </form>
 </div>
 <script src="jss/trumbowyg/trumbowyg.js"></script>

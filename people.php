@@ -149,7 +149,7 @@ $(function(){
 });
 </script>
 <p><h4>搜索结果：<h4></p>
-<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
+<div id="dtGridContainer_2_1_2" class="dt-grid-container" style="text-align: center;"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>
