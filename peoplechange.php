@@ -18,6 +18,7 @@ if($_POST){
     $phonenumber=_safe($_POST["phonenumber"]);
     $booknumber=_safe($_POST["booknumber"]);
     $status=_safe($_POST["status"]);
+    $id=_safe($_POST["id"]);
 }
 ?>
 <!DOCTYPE HTML>
@@ -118,15 +119,16 @@ if($_POST){
   </div>
   <div id="info_wid">
     <h2>登记修改</h2>
-    <form action="changesave.php" method="post"> 
+    <form action="peoplechangesave.php" method="post"> 
       <fieldset>
         <p><input type="text" name="studentname" value="<?php echo $studentname;?>"></p>
         <p><input type="text" name="studentnumber" value="<?php echo $studentnumber;?>"></p>
         <p><input type="text" name="roomnumber" value="<?php echo $roomnumber;?>"></p>
         <p><input type="text" name="phonenumber" value="<?php echo $phonenumber;?>"></p>
         <p><input type="text" name="booknumber" value="<?php echo $booknumber;?>"></p>
-        <p><input type="text" name="status" value="<?php echo $status;?>"></p>
-        <input class="info" type="submit" name="peoplesave" value="保存"/>
+        <p><input type="hidden" name="status" value="<?php echo $status;?>"></p>
+        <p><input type="hidden" name="id" value="<?php echo $id;?>"></p>
+        <input class="info" type="submit" value="保存"/>
     </form>
 </fieldset>
 </div>

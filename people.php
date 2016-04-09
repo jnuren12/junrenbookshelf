@@ -102,6 +102,7 @@ else{
 		people.phonenumber = '".$res['phonenumber']."';
 		people.roomnumber = '".$res['roomnumber']."';
 		people.time = '".$res['time']."';
+		people.id1 = ".$res['id'].";
 		datas.push(people);
 		";
 	}while($res=mysql_fetch_array($sql));
@@ -114,6 +115,7 @@ var dtGridColumns_2_1_2 = [
 {id:'phonenumber', title:'电话号码', type:'string', columnClass:'text-center', hideType:'sm|xs'},
 {id:'roomnumber', title:'宿舍', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'time', title:'借阅时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'xs'},
+{id:'id1', title:'ID', type:'int',columnClass:'text-center',hideType:'lg|md|sm|xs'},
 {id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center',resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
 	if(value==1){
@@ -125,9 +127,11 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
-	content += '<form class="formname" action="peoplechange.php" method="post"><input type="hidden" name="studentname" value="'+record.studentname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="studentnumber" value="'+record.studentnumber+'"/><input type="hidden" name="phonenumber" value="'+record.phonenumber+'"/><input type="hidden" name="roomnumber" value="'+record.roomnumber+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
+	content += '<form class="formname" action="peoplechange.php" method="post"><input type="hidden" name="studentname" value="'+record.studentname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="studentnumber" value="'+record.studentnumber+'"/><input type="hidden" name="phonenumber" value="'+record.phonenumber+'"/><input type="hidden" name="roomnumber" value="'+record.roomnumber+'"/><input type="hidden" name="status" value="'+record.status1+'"/><input type="hidden" name="id" value="'+record.id1+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
 	content += '&nbsp;&nbsp;';
-	content += '<form class="formname" action="peopledel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit" onClick="delcfm()"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+	content += '<form class="formname" action="peopledel.php" method="post"><input type="hidden" name="id" value="'+record.id1+'"/><button class="btn btn-xs btn-danger" type="submit" onClick="delcfm()"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+	content += '&nbsp;&nbsp;';
+	content += '<form class="formname" action="peoplerepay.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="id" value="'+record.id1+'"/><button class="btn btn-xs btn-info" type="submit" onClick="delcfmrepay()"><i class="fa fa-book"></i>&nbsp;&nbsp;还书</button></form>';
 	return content;
 }}
 
@@ -152,6 +156,11 @@ $(function(){
 <script language="javascript">
     function delcfm() {
         if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+    function delcfmrepay() {
+        if (!confirm("确认还书？")) {
             window.event.returnValue = false;
         }
     }

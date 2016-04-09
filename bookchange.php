@@ -115,7 +115,7 @@ input {
         <p><input type="text" name="author" value="<?php echo $_POST['author'];?>"></p>
         <p><input type="text" name="booknumber" value="<?php echo $_POST['booknumber'];?>"></p>
         <p><input type="text" name="type" value="<?php echo $_POST['type'];?>"></p>
-        <p><input type="text" name="status" value="<?php echo $_POST['status'];?>"></p>
+        <p><input type="hidden" name="status" value="<?php echo $_POST['status'];?>"></p>
         <input class="info" type="submit" name="booksave" value="保存"/>
     </form>
     </fieldset>
