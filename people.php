@@ -12,9 +12,8 @@ else{
 }
 include("inputfilter.php");
 $keyword=_safe($_GET["booknumber"]);
-echo $keyword;
 include("connection.php");
-if ($keyword == "")
+if ($keyword == " ")
 	$sql=mysql_query("SELECT * from people");
 else
 	$sql=mysql_query("SELECT * from people where booknumber='$keyword'");
