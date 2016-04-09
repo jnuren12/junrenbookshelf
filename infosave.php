@@ -1,11 +1,12 @@
 <?php
     header("Content-type: text/html; charset=utf-8"); 
+    include("inputfilter.php");
     if($_POST){
-    	$name=$_POST["username"];
-    	$sdu=$_POST["studentnumber"];
-    	$dorm=$_POST["dormnumber"];
-    	$tel=$_POST["phonenumber"];
-        $book=$_POST["booknumber"];
+    	$name=_safe($_POST["username"]);
+    	$sdu=_safe($_POST["studentnumber"]);
+    	$dorm=_safe($_POST["dormnumber"]);
+    	$tel=_safe($_POST["phonenumber"]);
+        $book=_safe($_POST["booknumber"]);
     	if ($name == "" || $sdu == "" || $dorm== "" || $tel == ""){
             echo "<script>alert('请确认信息完整！');history.go(-1);</script>"; 
         }

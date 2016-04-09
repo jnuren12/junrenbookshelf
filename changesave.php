@@ -1,11 +1,12 @@
 <?php
     header("Content-type: text/html; charset=utf-8"); 
+    include("inputfilter.php");
     if($_POST['peoplesave']){
-    	$studentname=$_POST["studentname"];
-    	$studentnumber=$_POST["studentnumber"];
-    	$roomnumber=$_POST["roomnumber"];
-    	$phonenumber=$_POST["phonenumber"];
-        $booknumber=$_POST["booknumber"];
+    	$studentname=_safe($_POST["studentname"]);
+    	$studentnumber=_safe($_POST["studentnumber"]);
+    	$roomnumber=_safe($_POST["roomnumber"]);
+    	$phonenumber=_safe($_POST["phonenumber"]);
+        $booknumber=_safe($_POST["booknumber"]);
         $status=$_POST["status"];
     	if ($studentname == "" || $studentnumber == "" || $roomnumber== "" || $booknumber == "" || $phonenumber == "" || $statusnumber == ""){
             echo "<script>alert('请确认信息完整！');history.go(-1);</script>"; 

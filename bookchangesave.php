@@ -1,11 +1,12 @@
 <?php 
     header("Content-type: text/html; charset=utf-8"); 
+    include("inputfilter.php");
     if($_POST['booksave']){
-        $bookname=$_POST["bookname"];
-        $booknumber=$_POST["booknumber"];
-        $author=$_POST["author"];
-        $type=$_POST["type"];
-        $status=$_POST["status"];
+        $bookname=_safe($_POST["bookname"]);
+        $booknumber=_safe($_POST["booknumber"]);
+        $author=_safe($_POST["author"]);
+        $type=_safe($_POST["type"]);
+        $status=_safe($_POST["status"]);
         if ($bookname == "" || $booknumber == "" || $author== "" || $type == "" || $status == ""){
             echo "<script>alert('请确认信息完整！');history.go(-1);</script>"; 
         }

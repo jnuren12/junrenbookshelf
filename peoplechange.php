@@ -10,13 +10,14 @@ else{
     if(!$result)
       header("Location: login.html");
 }
+include("inputfilter.php");
 if($_POST){
-    $studentname=$_POST["studentname"];
-    $studentnumber=$_POST["studentnumber"];
-    $roomnumber=$_POST["roomnumber"];
-    $phonenumber=$_POST["phonenumber"];;
-    $booknumber=$_POST["booknumber"];
-    $status=$_POST["status"];
+    $studentname=_safe($_POST["studentname"]);
+    $studentnumber=_safe($_POST["studentnumber"]);
+    $roomnumber=_safe($_POST["roomnumber"]);
+    $phonenumber=_safe($_POST["phonenumber"]);
+    $booknumber=_safe($_POST["booknumber"]);
+    $status=_safe($_POST["status"]);
 }
 ?>
 <!DOCTYPE HTML>

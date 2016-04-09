@@ -1,59 +1,23 @@
-<?php
-$booknumber = $_GET["booknumber"];
-include("connection.php");
-$sql = mysql_query("SELECT bookname from book where booknumber='$booknumber'");
-$res=mysql_fetch_array($sql);
-do{
-    $bookname = $res["bookname"];
-}while($res=mysql_fetch_array($sql));
-if ($booknumber == "")
-    $sql=mysql_query("SELECT * from comment ORDER BY id DESC");
-else
-    $sql=mysql_query("SELECT * from comment where booknumber='$booknumber' ORDER BY id DESC");
-if($sql==false){
-    echo "<script>alert('亲……臣妾找不到啊……');history.go(-1);</script>";
-} 
-else{
-    $res=mysql_fetch_array($sql);
-    ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
-        <title>评论<?php echo $_GET["booknumber"];?></title>
-        <link href="css/menu.css" media="screen" rel="stylesheet">
-        <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <!-- jQuery -->
-        <script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
-        <!-- bootstrap -->
-        <script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css" />
-<!--[if lt IE 9]>
-    <script src="../../../jss/dependents/bootstrap/plugins/ie/html5shiv.js"></script>
-    <script src="../../../jss/dependents/bootstrap/plugins/ie/respond.js"></script>
-    <![endif]-->
-<!--[if lt IE 8]>
-    <script src="../../../jss/dependents/bootstrap/plugins/ie/json2.js"></script>
-    <![endif]-->
-    <!-- font-awesome -->
-    <link rel="stylesheet" type="text/css" href="../../../jss/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
-    <!-- dtGrid -->
-    <script type="text/javascript" src="../../../jss/jquery.dtGrid.js"></script>
-    <script type="text/javascript" src="../../../jss/i18n/en.js"></script>
-    <script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
-    <!-- datePicker -->
-    <script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
-    <link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
-    <link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
+    <title>联系我们</title>
+    <link href="css/menu.css" media="screen" rel="stylesheet">
+    <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
+    <script src="js/jquery-ui.min.js"></script>
+    <link href="jss/dependents/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jss/dependents/jquery/jquery.min.js"></script>
+    <script src="jss/dependents/bootstrap/js/bootstrap.min.js"></script>
     <style type="text/css">
         html, body {
             margin: 0;
             padding: 0;
             background-color: #F2F2F2;
             font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        }
+        header {
+            text-align: center;
         }
         .menu > li{
             width: 20%;
@@ -92,7 +56,10 @@ else{
           border-radius: 3px;
       }
       .info:hover{background-color:rgb(49,126,243); }
-  </style>
+      .input-group{
+        margin:20px;
+    }
+</style>
 </head>
 <body>
     <div class="header">
@@ -104,54 +71,34 @@ else{
           <li><a href="contact.php"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
       </ul>
   </div>
-  <script type="text/javascript">
-    var datas = new Array();
-    <?php
-    do{
-        echo "var comment = new Object();
-        comment.booknumber = '".$booknumber."';
-        comment.bookname = '".$bookname."';
-        comment.comment = '".$res['comment']."';
-        comment.time = '".$res['time']."';
-        datas.push(comment);
-        ";
-    }while($res=mysql_fetch_array($sql));
-}
-?>
-var dtGridColumns_2_1_2 = [
-{id:'booknumber', title:'书号', type:'string', columnClass:'text-center', hideType:'sm|xs'},
-{id:'bookname', title:'书名', type:'string', columnClass:'text-center', hideType:'xs'},
-{id:'comment', title:'评论', type:'string', columnClass:'text-center'},
-{id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'xs'},
-];
-var dtGridOption_2_1_2 = {
-    lang : 'zh-cn',
-    ajaxLoad : false,
-    exportFileName : '评论列表',
-    datas : datas,
-    columns : dtGridColumns_2_1_2,
-    gridContainer : 'dtGridContainer_2_1_2',
-    toolbarContainer : 'dtGridToolBarContainer_2_1_2',
-    tools : '',
-    pageSize : 10,
-    pageSizeLimit : [10, 20, 50]
-};
-var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
-$(function(){
-    grid_2_1_2.load();
-});
-</script>
-<p><h4>读者评论：<h4></p>
-<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
-<div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
+  <header>
+  <h1>Some Ways to contact us</h1>
+
+    <p style="font-size:20px">
+        <br>
+        phonenumber: <b>666666</b> <br>
+        email: <b>1145833162@qq.com</b>
+    </p>
+</header>
 <div id="main" role="main">
+    <p style="font-size:20px;margin-left:20px;color:#7d7c7c">
+    <br>
+      Or you can fill the following form to show us your opinions: 
+    </p>
     <form action="commentsave.php" method="post">
-        <input type="hidden" name="booknumber" value="<?php echo $_GET["booknumber"];?>">
-        <textarea id="form-content" class="editor" name="comment" cols="30" rows="10">
-        我要评价
-        </textarea>
-        <input class="info" type="submit"/ value="提交">
-    </form>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon">name</span>
+          <input name="username" type="text" class="form-control" placeholder="your name">
+      </div>
+      <div class="input-group input-group-lg">
+          <span class="input-group-addon">@</span>
+          <input name="email" type="text" class="form-control" placeholder="your email">
+      </div>
+      <textarea id="form-content" class="editor" name="comment" cols="30" rows="10">
+        I want ot say ~
+    </textarea>
+    <input class="info" type="submit"/ value="提交">
+</form>
 </div>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>

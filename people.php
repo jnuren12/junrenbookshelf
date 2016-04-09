@@ -10,7 +10,8 @@ else{
 	if(!$result)
 		header("Location: login.html");
 }
-$keyword=$_GET["booknumber"];
+include("inputfilter.php");
+$keyword=_safe($_GET["booknumber"]);
 include("connection.php");
 if ($keyword == " ")
 	$sql=mysql_query("SELECT * from people");

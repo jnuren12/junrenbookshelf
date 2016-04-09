@@ -1,15 +1,17 @@
 <?php
-$booknumber = $_GET["booknumber"];
+if(!isset($_COOKIE['username'])){
+  header("Location: login.html");
+}
+else{
+  $username=$_COOKIE['username'];
+  $password=$_COOKIE['password'];
+  include("connection.php");
+  $result=mysql_query("SELECT * FROM admin WHERE username='$username' AND password='$password'",$conn);
+  if(!$result)
+    header("Location: login.html");
+}
 include("connection.php");
-$sql = mysql_query("SELECT bookname from book where booknumber='$booknumber'");
-$res=mysql_fetch_array($sql);
-do{
-    $bookname = $res["bookname"];
-}while($res=mysql_fetch_array($sql));
-if ($booknumber == "")
-    $sql=mysql_query("SELECT * from comment ORDER BY id DESC");
-else
-    $sql=mysql_query("SELECT * from comment where booknumber='$booknumber' ORDER BY id DESC");
+$sql=mysql_query("SELECT * from contact ORDER BY id DESC");
 if($sql==false){
     echo "<script>alert('亲……臣妾找不到啊……');history.go(-1);</script>";
 } 
@@ -20,7 +22,7 @@ else{
     <html>
     <head>
         <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
-        <title>评论<?php echo $_GET["booknumber"];?></title>
+        <title>反馈管理</title>
         <link href="css/menu.css" media="screen" rel="stylesheet">
         <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
         <script src="js/jquery-1.10.2.min.js"></script>
@@ -101,7 +103,7 @@ else{
           <li><a href="search.php?bookname= &search=查找"><i class="menu-icon menu-icon-5"></i>书架</a></li>
           <li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
           <li><a href="login.html"><i class="menu-icon menu-icon-8"></i>登录</a></li>
-          <li><a href="contact.php"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
+          <li><a href="#"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
       </ul>
   </div>
   <script type="text/javascript">
@@ -109,8 +111,8 @@ else{
     <?php
     do{
         echo "var comment = new Object();
-        comment.booknumber = '".$booknumber."';
-        comment.bookname = '".$bookname."';
+        comment.username = '".$username."';
+        comment.email = '".$email."';
         comment.comment = '".$res['comment']."';
         comment.time = '".$res['time']."';
         datas.push(comment);
@@ -119,10 +121,10 @@ else{
 }
 ?>
 var dtGridColumns_2_1_2 = [
-{id:'booknumber', title:'书号', type:'string', columnClass:'text-center', hideType:'sm|xs'},
-{id:'bookname', title:'书名', type:'string', columnClass:'text-center', hideType:'xs'},
+{id:'username', title:'姓名', type:'string', columnClass:'text-center', hideType:'xs'},
+{id:'email', title:'邮箱', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'comment', title:'评论', type:'string', columnClass:'text-center'},
-{id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'xs'},
+{id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'},
 ];
 var dtGridOption_2_1_2 = {
     lang : 'zh-cn',
@@ -141,84 +143,8 @@ $(function(){
     grid_2_1_2.load();
 });
 </script>
-<p><h4>读者评论：<h4></p>
+<p><h4>用户反馈：<h4></p>
 <div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
-<div id="main" role="main">
-    <form action="commentsave.php" method="post">
-        <input type="hidden" name="booknumber" value="<?php echo $_GET["booknumber"];?>">
-        <textarea id="form-content" class="editor" name="comment" cols="30" rows="10">
-        我要评价
-        </textarea>
-        <input class="info" type="submit"/ value="提交">
-    </form>
-</div>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>
-<script src="jss/dist/trumbowyg.min.js"></script>
-<script src="jss/dist/langs/zh_cn.min.js"></script>
-<script src="jss/dist/plugins/upload/trumbowyg.upload.js"></script>
-<script src="jss/dist/plugins/base64/trumbowyg.base64.js"></script>
-<script>
-    /** Default editor configuration **/
-    $('#simple-editor').trumbowyg();
-            /********************************************************
-             * Customized button pane + buttons groups + dropdowns
-             * Use upload plugin
-             *******************************************************/
-            /*
-             * Add your own groups of button
-             */
-             $.trumbowyg.btnsGrps.test = ['bold', 'link'];
-
-             /* Add new words for customs btnsDef just below */
-             $.extend(true, $.trumbowyg.langs, {
-                fr: {
-                    align: 'Alignement',
-                    image: 'Image'
-                }
-            });
-             $('#customized-buttonpane').trumbowyg({
-                lang: 'fr',
-                closable: true,
-                fixedBtnPane: true,
-                btnsDef: {
-                    // Customizables dropdowns
-                    align: {
-                        dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-                        ico: 'justifyLeft'
-                    },
-                    image: {
-                        dropdown: ['insertImage', 'upload', 'base64'],
-                        ico: 'insertImage'
-                    }
-                },
-                btns: ['viewHTML',
-                '|', 'formatting',
-                '|', 'btnGrp-test',
-                '|', 'align',
-                '|', 'btnGrp-lists',
-                '|', 'image']
-            });
-             /** Simple customization with current options **/
-             $('#form-content').trumbowyg({
-                lang: 'fr',
-                closable: true,
-                mobile: true,
-                fixedBtnPane: true,
-                fixedFullWidth: true,
-                semantic: true,
-                resetCss: true,
-                autoAjustHeight: true,
-                autogrow: true
-            });
-             $('.editor').on('dblclick', function(e){
-                $(this).trumbowyg({
-                    lang: 'fr',
-                    closable: true,
-                    fixedBtnPane: true
-                });
-            });
-         </script>
-     </body>
-     </html>
+</body>
+</html>

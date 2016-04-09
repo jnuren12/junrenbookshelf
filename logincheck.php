@@ -1,7 +1,8 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
-    	$username = $_POST["username"];
-    	$password = $_POST["password"];
+include("inputfilter.php");
+    	$username = _safe($_POST["username"]);
+    	$password = _safe($_POST["password"]);
     	if($username == " " || $password == " ")
     	{  
     		echo "<script>alert('用户名或密码未输入！');history.go(-1);</script>";

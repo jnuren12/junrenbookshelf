@@ -57,7 +57,8 @@ else{
 		<ul class="menu boxed clearfix">
 			<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
 			<li><a href="#panel-784120" data-toggle="tab"><i class="menu-icon menu-icon-4"></i>书架管理</a></li>
-			<li><a href="#panel-280270" data-toggle="tab"><i class="menu-icon menu-icon-8"></i>借阅人管理</a></li>
+			<li><a href="#panel-280270" data-toggle="tab"><i class="menu-icon menu-icon-8"></i>借阅管理</a></li>
+			<li><a href="contactmanage.php"><i class="menu-icon menu-icon-6"></i>反馈管理</a></li>
 			<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
 			<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
 		</ul>
