@@ -7,7 +7,7 @@ else{
   $password=$_COOKIE['password'];
   include("connection.php");
   $result=mysql_query("SELECT * FROM admin WHERE username='$username' AND password='$password'",$conn);
-  if(!$result)
+  if (mysql_num_rows($result) == 0)
     header("Location: login.html");
 }
 include("connection.php");
