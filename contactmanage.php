@@ -63,36 +63,6 @@ else{
             color: #c9376e !important; 
             text-decoration: none;
         }
-        #main {
-            max-width: 960px;
-            margin: 20px auto;
-        }
-        .info{
-          border: none;
-          font-family: inherit;
-          font-size: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-          -webkit-appearance: none;
-          -webkit-border-radius: 0 0 20px 20px;
-          -moz-border-radius: 0 0 20px 20px;
-          border-radius: 0 0 20px 20px;
-          background-color: rgb(51,136,255);
-          font-size: 20px;
-          color: #fff;
-          display: block;
-          padding: 4px 4px;
-          width: 120px;
-          height: 40px;
-          float: right;
-          margin: 10px 40px 40px 0;
-          cursor:pointer;
-          line-height: 1.5em;
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px;
-          border-radius: 3px;
-      }
-      .info:hover{background-color:rgb(49,126,243); }
   </style>
 </head>
 <body>
