@@ -27,7 +27,6 @@ else{
       background-image: url(https://getsharex.com/img/header_background.jpg);
       background-color: rgb(43,62,120);
       text-align:center;
-      overflow: hidden;
   }
   .menu > li{
     width: 25%;
