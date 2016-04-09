@@ -149,6 +149,13 @@ $(function(){
     grid_2_1_2.load();
 });
 </script>
+<script language="javascript">
+    function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+</script>
 <p><h4>用户反馈：<h4></p>
 <div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
