@@ -18,8 +18,7 @@
        zoom:1.0;
    }/*等效于wlsj.html中meta/viewport声明*/
    body{
-    background-image: url(https://getsharex.com/img/header_background.jpg);
-    background-color: rgb(43,62,120);
+    background-image: url(images/5.jpg);
 }
 .body-fluid{
     width: auto;

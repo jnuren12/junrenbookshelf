@@ -28,9 +28,12 @@ else{
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<style type="text/css">
+	@viewport{
+       width: extend-to-zoom 100%;
+       zoom:1.0;
+   }
 		body{
-			background-image: url(https://getsharex.com/img/header_background.jpg);
-			background-color: rgb(43,62,120);
+			background-image: url(images/5.jpg);
 		}
 		a:hover, a:focus {
 			color: #c9376e !important; 

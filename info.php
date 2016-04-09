@@ -17,15 +17,19 @@
 <meta charset="utf-8">
 <title>借阅登记</title>
 <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="css/menu.css" media="screen" rel="stylesheet">
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
 <style type="text/css">
+@viewport{
+       width: extend-to-zoom 100%;
+       zoom:1.0;
+   }
 body{
   width: auto;
   height:auto;
-  background-image: url(https://getsharex.com/img/header_background.jpg);
-  background-color: rgb(43,62,120);
+  background-image: url(images/5.jpg);
   text-align:center;
         }
          .menu > li{
