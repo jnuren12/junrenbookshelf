@@ -107,7 +107,7 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 			 			var content = '';
-			 			content += '<form action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';
+			 			content += '<form action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-info" type="submit"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';
 			 			return content;
 			 		}}
 ];
