@@ -2,6 +2,10 @@
 $booknumber = $_GET["booknumber"];
 include("connection.php");
 $bookname = mysql_query("SELECT bookname from book where booknumber='$booknumber'")[0];
+$res=mysql_fetch_array($sql);
+do{
+    $bookname = $res["bookname"];
+}while($res=mysql_fetch_array($sql));
 if ($booknumber == "")
     $sql=mysql_query("SELECT * from comment");
 else
