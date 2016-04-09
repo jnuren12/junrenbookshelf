@@ -83,7 +83,8 @@ else{
           padding: 4px 4px;
           width: 120px;
           height: 40px;
-          margin: 10px 0 20px 20px;
+          float: right;
+          margin: 10px 40px 40px 0;
           cursor:pointer;
           line-height: 1.5em;
           -webkit-border-radius: 3px;
