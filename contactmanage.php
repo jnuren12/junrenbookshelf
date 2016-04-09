@@ -24,7 +24,6 @@ else{
         <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
         <title>反馈管理</title>
         <link href="css/menu.css" media="screen" rel="stylesheet">
-        <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <!-- jQuery -->
@@ -124,12 +123,12 @@ var dtGridColumns_2_1_2 = [
 {id:'username', title:'姓名', type:'string', columnClass:'text-center', hideType:'xs'},
 {id:'email', title:'邮箱', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'comment', title:'评论', type:'string', columnClass:'text-center'},
-{id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'},
+{id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'}
 ];
 var dtGridOption_2_1_2 = {
     lang : 'zh-cn',
     ajaxLoad : false,
-    exportFileName : '评论列表',
+    exportFileName : '反馈列表',
     datas : datas,
     columns : dtGridColumns_2_1_2,
     gridContainer : 'dtGridContainer_2_1_2',
