@@ -6,7 +6,7 @@ else{
   $username=$_COOKIE['username'];
   $password=$_COOKIE['password'];
   include("connection.php");
-  $result=mysql_query("SELECT * FROM contact WHERE username='$username' AND password='$password'",$conn);
+  $result=mysql_query("SELECT * FROM admin WHERE username='$username' AND password='$password'",$conn);
   if(!$result)
     header("Location: login.html");
 }
