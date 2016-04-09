@@ -8,6 +8,11 @@
   <link href="css/menu.css" media="screen" rel="stylesheet">
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"/>
+  <script src="http://cdn.gbtags.com/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/styles.css" media="screen" type="text/css" />
   <style type="text/css">
     @viewport{
      width: extend-to-zoom 100%;
@@ -19,21 +24,13 @@
     background-image: url(images/5.jpg);
     text-align:center;
   }
+  .login-page{
+    background: none;
+  }
   .menu > li{
     width: 20%;
   }
-  input {
-    border: none;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    -webkit-appearance: none;
-  }
-
-  /* ---------- LOGIN ---------- */
 </style>
-<link href="css/form.css" media="screen" rel="stylesheet">
 </head>
 <body>
   <div class="header">
@@ -45,15 +42,40 @@
       <li><a href="contact.php"><i class="menu-icon menu-icon-6"></i>联系我们</a></li>
     </ul>
   </div>
-  <div id="log_wid">
-    <h2>登录窗口</h2>
-    <form action="logincheck.php" method="post">
-      <fieldset>
-        <p><input type="text" name="username" placeholder="用户名" onBlur="if(this.placeholder=='')this.placeholder='用户名'" onFocus="if(this.placeholder=='用户名')this.placeholder=''"></p>
-        <p><input type="password" name="password" placeholder="密码" onBlur="if(this.placeholder=='')this.placeholder='密码'" onFocus="if(this.placeholder=='密码')this.placeholder=''"></p>      
-        <input class="login" type="submit" name="submit" value="登录"/>
-      </fieldset>
-    </form>
-  </div> 
+  <div class="login-page">
+    <div class="login-form">
+      <div class="login-content">
+        <div class="form-login-error">
+          <h3>Invalid login</h3>
+          <p>Enter <strong>demo</strong>/<strong>demo</strong> as login and password.</p>
+        </div>
+        <form method="post" role="form" id="form_login" action="logincheck.php">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </div>
+              <input type="text" class="form-control" name="username" id="username" placeholder="Username" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-key"></i>
+              </div>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-login">
+              <i class="fa fa-sign-in"></i>
+              Login In
+            </button>
+          </div>
+          <!-- Implemented in v1.1.4 --> 
+        </form>
+      </div>
+    </div>
+  </div>
 </body> 
 </html>

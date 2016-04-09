@@ -2,9 +2,9 @@
     header("Content-type: text/html; charset=utf-8"); 
     include("inputfilter.php");
     if($_POST){
-    	$name=_safe($_POST["username"]);
+    	$name=_safe($_POST["studentname"]);
     	$sdu=_safe($_POST["studentnumber"]);
-    	$dorm=_safe($_POST["dormnumber"]);
+    	$dorm=_safe($_POST["roomnumber"]);
     	$tel=_safe($_POST["phonenumber"]);
         $book=_safe($_POST["booknumber"]);
     	if ($name == "" || $sdu == "" || $dorm== "" || $tel == ""){
@@ -17,7 +17,7 @@
             $sql = mysql_query("insert into people(studentname,studentnumber,roomnumber,phonenumber,booknumber,status) values('$name','$sdu','$dorm','$tel','$book','$n')");//执行插入语句
             $sql = mysql_query("UPDATE book SET status = '$n' WHERE booknumber = '$book'");
             if($sql){
-                echo "<script>alert('保存成功');history.go(-1);</script>";
+                echo "<script>alert('登记成功');history.go(-1);</script>";
             }
         }
     }

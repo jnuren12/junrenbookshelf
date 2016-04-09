@@ -21,6 +21,11 @@ else{
   <link href="css/menu.css" media="screen" rel="stylesheet">
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"/>
+  <script src="http://cdn.gbtags.com/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/styles.css" media="screen" type="text/css" />
   <style type="text/css">
   @viewport{
        width: extend-to-zoom 100%;
@@ -32,70 +37,12 @@ else{
       background-image: url(images/5.jpg);
       text-align:center;
   }
+  .login-page{
+    background: none;
+  }
   .menu > li{
     width: 25%;
 }
-  input {
-      border: none;
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      -webkit-appearance: none;
-  }
-  /* ---------- REGISTER ---------- */
-  #info_wid {
-      margin: 50px auto;
-      width: 400px;
-  }
-  #info_wid h2 {
-      text-align: center;
-      background-color: #2FA99E;
-      font-size: 28px;
-      -webkit-border-radius: 20px 20px 0 0 ;
-      -moz-border-radius: 20px 20px 0 0 ;
-      border-radius: 20px 20px 0 0 ;
-      color: #FFF;
-      padding: 20px 26px;
-      position: relative;top: 24px;left:0px;
-  }
-  #info_wid fieldset {
-      background-color: #fff;
-      -webkit-border-radius: 0 0 20px 20px;
-      -moz-border-radius: 0 0 20px 20px;
-      border-radius: 0 0 20px 20px;
-      padding: 20px 26px;
-  }
-  #info_wid fieldset p {
-      color: #777;
-      margin-bottom: 14px;
-  }
-  #info_wid fieldset input {
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-  }
-  #info_wid fieldset input[type="text"]{
-      background-color: #eee;
-      color: #777;
-      padding: 4px 10px;
-      width: 328px;
-      height: 37px;
-  }
-  .info{
-      background-color: rgb(51,136,255);
-      font-size: 20px;
-      color: #fff;
-      display: block;
-      padding: 4px 4px;
-      width: 120px;
-      height: 40px;
-      float: left;
-      margin-left: 110px;
-      cursor:pointer;
-      line-height: 1.5em;
-  }
-  .info:hover{background-color:rgb(49,126,243); }
 </style>
 </head>
 <body>
@@ -107,17 +54,54 @@ else{
       <li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
   </ul>
 </div>
-<div id="info_wid">
-    <h2>添加书籍</h2>
-    <form action="addsave.php" method="post"> 
-      <fieldset>
-        <p><input type="text" name="bookname" placeholder="书名" onBlur="if(this.placeholder=='')this.placeholder='书名'" onFocus="if(this.placeholder=='书名')this.placeholder=''"></p>
-        <p><input type="text" name="booknumber" placeholder="书号" onBlur="if(this.placeholder=='')this.placeholder='书号'" onFocus="if(this.placeholder=='书号')this.placeholder=''"></p>
-        <p><input type="text" name="author" placeholder="作者" onBlur="if(this.placeholder=='')this.placeholder='作者'" onFocus="if(this.placeholder=='作者')this.placeholder=''"></p>
-        <p><input type="text" name="type" placeholder="类别" onBlur="if(this.placeholder=='')this.placeholder='类别'" onFocus="if(this.placeholder=='类别')this.placeholder=''"></p>
-        <input class="info" type="submit" name="infosave" value="保存"/>
-    </form>
-</fieldset>
-</div>
+<div class="login-page">
+    <div class="login-form">
+      <div class="login-content">
+        <div class="form-login-error">
+        </div>
+        <form method="post" role="form" id="form_login" action="addsave.php">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </div>
+              <input type="text" class="form-control" name="bookname" id="username" placeholder="书名" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </div>
+              <input type="text" class="form-control" name="booknumber" id="username" placeholder="书号" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </div>
+              <input type="text" class="form-control" name="author" id="username" placeholder="作者" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </div>
+              <input type="text" class="form-control" name="type" id="username" placeholder="类别" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-login">
+              <i class="fa fa-sign-in"></i>
+              添加
+            </button>
+          </div>
+          <!-- Implemented in v1.1.4 --> 
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

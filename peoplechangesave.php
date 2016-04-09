@@ -27,7 +27,7 @@
             }
             $sql = mysql_query("UPDATE people SET studentname = '$studentname', studentnumber = '$studentnumber', roomnumber = '$roomnumber', phonenumber = '$phonenumber', booknumber = '$booknumber', status = '$status' WHERE id = '$id'");
             if($sql){
-                echo "<script>alert('保存成功');history.go(-1);</script>";
+                echo "<script>alert('修改成功');history.go(-1);</script>";
             }
             echo "<script>history.go(-1);</script>";
         }

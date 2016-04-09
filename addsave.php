@@ -14,7 +14,7 @@
     		include("connection.php");
             $sql = mysql_query("INSERT into book(bookname,author,booknumber,type,status) values('$bookname','$author','$booknumber','$type','1')");//执行插入语句
             if($sql){
-                echo "<script>alert('保存成功');history.go(-1);</script>";
+                echo "<script>alert('添加成功');history.go(-1);</script>";
             }
         }
     }
