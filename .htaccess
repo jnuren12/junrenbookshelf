@@ -1,5 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  RewriteRule ([0-9]{1,}).html$ comment.php?booknumber=$1
-</IfModule>

@@ -1,6 +1,5 @@
 <?php
 $booknumber = $_GET["booknumber"];
-echo $booknumber;
 include("connection.php");
 $sql = mysql_query("SELECT bookname from book where booknumber='$booknumber'");
 $res=mysql_fetch_array($sql);
