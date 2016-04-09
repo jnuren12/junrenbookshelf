@@ -85,7 +85,7 @@
     <br>
       Or you can fill the following form to show us your opinions: 
     </p>
-    <form action="commentsave.php" method="post">
+    <form action="contactsave.php" method="post">
         <div class="input-group input-group-lg">
           <span class="input-group-addon">name</span>
           <input name="username" type="text" class="form-control" placeholder="your name">
