@@ -12,7 +12,7 @@ if($_POST){
         $pattern = "/^([0-9A-Za-z\\-_\\.]+)@([0-9a-z]+\\.[a-z]{2,3}(\\.[a-z]{2})?)$/i";
         if ( preg_match( $pattern, $email) ){
             include("connection.php");
-            $sql = mysql_query("INSERT into comment(username,email,comment) values('$username','$email','$comment')");//执行插入语句
+            $sql = mysql_query("INSERT into contact(username,email,comment) values('$username','$email','$comment')");//执行插入语句
             if($sql){
                 echo "<script>alert('评论成功');history.go(-1);</script>";
             }
