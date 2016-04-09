@@ -123,7 +123,7 @@ var dtGridColumns_2_1_2 = [
 {id:'username', title:'姓名', type:'string', columnClass:'text-center', hideType:'xs'},
 {id:'email', title:'邮箱', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'comment', title:'评论', type:'string', columnClass:'text-center'},
-{id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'}
+{id:'time', title:'反馈时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'}
 ];
 var dtGridOption_2_1_2 = {
     lang : 'zh-cn',
