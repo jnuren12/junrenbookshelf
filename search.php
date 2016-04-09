@@ -73,15 +73,15 @@ else{
 			color: #fff;
 			text-decoration: none
 		}
-		a.astyle:visited {
-			color: #fff;
-			text-decoration: none
-		}
 		a.astyle:hover {
 			color: #fff;
 			text-decoration: none
 		}
 		a.astyle:active {
+			color: #fff;
+			text-decoration: none
+		}
+		a.astyle:visited {
 			color: #fff;
 			text-decoration: none
 		}
