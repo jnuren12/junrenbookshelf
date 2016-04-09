@@ -64,7 +64,7 @@ else{
         }
         #main {
             max-width: 960px;
-            margin: 0 auto;
+            margin: 20px auto;
         }
         .info{
           border: none;
