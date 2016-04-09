@@ -123,7 +123,7 @@ var dtGridColumns_2_1_2 = [
 	var content = '';
 	content += '<form class="formname" action="bookchange.php" method="post"><input type="hidden" name="bookname" value="'+record.bookname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="author" value="'+record.author+'"/><input type="hidden" name="type" value="'+record.type1.toString()+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
 	content += '&nbsp;&nbsp;';
-	content += '<form class="formname" action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+	content += '<form class="formname" action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit" onClick="delcfm()"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
 	return content;
 }}
 
@@ -144,6 +144,13 @@ var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
 $(function(){
 	grid_2_1_2.load();
 });
+</script>
+<script language="javascript">
+    function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
 </script>
 <p><h4>搜索结果：<h4></p>
 <div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
