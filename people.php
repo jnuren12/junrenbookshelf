@@ -11,11 +11,9 @@ else{
 		header("Location: login.html");
 }
 $keyword=$_GET["booknumber"];
-$conn=@mysql_connect('localhost','root','');
-mysql_select_db("bookshelf",$conn);
-mysql_query("set names 'utf8'");
+include("connection.php");
 if ($keyword == " ")
-	$sql=mysql_query("SELECT * from people");  
+	$sql=mysql_query("SELECT * from people");
 else
 	$sql=mysql_query("SELECT * from people where booknumber='$keyword'");
 if($sql==false){
