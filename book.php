@@ -60,6 +60,12 @@ else{
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 	<style type="text/css">
+	html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F2;
+            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        }
 		.menu > li{
 			width: 25%;
 		}

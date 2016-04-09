@@ -51,12 +51,12 @@ else{
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 
 	<style type="text/css">
-		.body-fluid{
-			width: auto;
-			height:500px;	
-			color:#DCDCDC;
-			text-align:center;
-		}
+		html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F2;
+            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        }
 		a:hover, a:focus {
 			color: #c9376e !important; 
 			text-decoration: none;

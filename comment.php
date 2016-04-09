@@ -51,11 +51,12 @@ else{
             background-color: #F2F2F2;
             font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
         }
-        header {
-            text-align: center;
-        }
         .menu > li{
             width: 20%;
+        }
+        a:hover, a:focus {
+            color: #c9376e !important; 
+            text-decoration: none;
         }
         #main {
             max-width: 960px;
