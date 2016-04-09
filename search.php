@@ -78,7 +78,6 @@ else{
 	//映射内容
 	var status1 = {0:'已借出', 1:'可借阅'};
 	var type1 = {1:'小学', 2:'初中', 3:'高中', 4:'中专', 5:'大学', 6:'硕士', 7:'博士', 8:'其他'};
-	//模拟数据（薪水在6000-12000之间，日期在1980-01-01 00::00:00到2014-10-01 00:00:00之间）
 	var datas = new Array();
 	<?php
 	do{
@@ -105,7 +104,7 @@ var dtGridColumns_2_1_2 = [
 		content += '<span style="background:#c447ae;padding:2px 10px;color:white;">已借出</span>';
 	}
 	return content;
-}}
+}},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 			 			var content = '';
 			 			content += '<form action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';

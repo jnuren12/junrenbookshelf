@@ -104,12 +104,12 @@ else{
     var datas = new Array();
     <?php
     do{
-        echo "var book = new Object();
-        book.booknumber = '".$booknumber."';
-        book.bookname = '".$bookname."';
-        book.comment = '".$res['comment']."';
-        people.time = '".$res['time']."';
-        datas.push(book);
+        echo "var comment = new Object();
+        comment.booknumber = '".$booknumber."';
+        comment.bookname = '".$bookname."';
+        comment.comment = '".$res['comment']."';
+        comment.time = '".$res['time']."';
+        datas.push(comment);
         ";
     }while($res=mysql_fetch_array($sql));
 }
