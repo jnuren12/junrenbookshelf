@@ -121,11 +121,11 @@ if($_POST){
     <h2>登记修改</h2>
     <form action="peoplechangesave.php" method="post"> 
       <fieldset>
-        <p><input type="text" name="studentname" value="<?php echo $studentname;?>"></p>
-        <p><input type="text" name="studentnumber" value="<?php echo $studentnumber;?>"></p>
-        <p><input type="text" name="roomnumber" value="<?php echo $roomnumber;?>"></p>
-        <p><input type="text" name="phonenumber" value="<?php echo $phonenumber;?>"></p>
-        <p><input type="text" name="booknumber" value="<?php echo $booknumber;?>"></p>
+        <p><input type="text" name="studentname" value="<?php echo $studentname;?>" placeholder="姓名" onBlur="if(this.placeholder=='')this.placeholder='姓名'" onFocus="if(this.placeholder=='姓名')this.placeholder=''"></p>
+        <p><input type="text" name="studentnumber" value="<?php echo $studentnumber;?>" placeholder="学号" onBlur="if(this.placeholder=='')this.placeholder='学号'" onFocus="if(this.placeholder=='学号')this.placeholder=''"></p>
+        <p><input type="text" name="roomnumber" value="<?php echo $roomnumber;?>" placeholder="宿舍" onBlur="if(this.placeholder=='')this.placeholder='宿舍'" onFocus="if(this.placeholder=='宿舍')this.placeholder=''"></p>
+        <p><input type="text" name="phonenumber" value="<?php echo $phonenumber;?>" placeholder="电话" onBlur="if(this.placeholder=='')this.placeholder='电话'" onFocus="if(this.placeholder=='电话')this.placeholder=''"></p>
+        <p><input type="text" name="booknumber" value="<?php echo $booknumber;?>" placeholder="书号" onBlur="if(this.placeholder=='')this.placeholder='书号'" onFocus="if(this.placeholder=='书号')this.placeholder=''"></p>
         <p><input type="hidden" name="status" value="<?php echo $status;?>"></p>
         <p><input type="hidden" name="id" value="<?php echo $id;?>"></p>
         <input class="info" type="submit" value="保存"/>

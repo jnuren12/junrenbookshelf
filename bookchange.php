@@ -111,10 +111,10 @@ input {
     <h2>书籍修改</h2>
     <form action="bookchangesave.php" method="post"> 
       <fieldset>
-        <p><input type="text" name="bookname" value="<?php echo $_POST['bookname'];?>"></p>
-        <p><input type="text" name="author" value="<?php echo $_POST['author'];?>"></p>
-        <p><input type="text" name="booknumber" value="<?php echo $_POST['booknumber'];?>"></p>
-        <p><input type="text" name="type" value="<?php echo $_POST['type'];?>"></p>
+        <p><input type="text" name="bookname" value="<?php echo $_POST['bookname'];?>" placeholder="书名" onBlur="if(this.placeholder=='')this.placeholder='书名'" onFocus="if(this.placeholder=='书名')this.placeholder=''"></p>
+        <p><input type="text" name="author" value="<?php echo $_POST['author'];?>" placeholder="作者" onBlur="if(this.placeholder=='')this.placeholder='作者'" onFocus="if(this.placeholder=='作者')this.placeholder=''"></p>
+        <p><input type="text" name="booknumber" value="<?php echo $_POST['booknumber'];?>" placeholder="书号" onBlur="if(this.placeholder=='')this.placeholder='书号'" onFocus="if(this.placeholder=='书号')this.placeholder=''"></p>
+        <p><input type="text" name="type" value="<?php echo $_POST['type'];?>" placeholder="类型" onBlur="if(this.placeholder=='')this.placeholder='类型'" onFocus="if(this.placeholder=='类型')this.placeholder=''"></p>
         <p><input type="hidden" name="status" value="<?php echo $_POST['status'];?>"></p>
         <input class="info" type="submit" name="booksave" value="保存"/>
     </form>

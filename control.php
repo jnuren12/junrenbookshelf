@@ -70,7 +70,7 @@ else{
 					<i> </i>
 					<div class="s-bar">
 						<form action="book.php" method="get">
-							<input type="text" name="booknumber" value="请输入书号查找书籍" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入书号查找书籍';}">
+							<input type="text" name="booknumber" placeholder="请输入书号查找书籍" onBlur="if(this.placeholder=='')this.placeholder='请输入书号查找书籍'" onFocus="if(this.placeholder=='请输入书号查找书籍')this.placeholder=''">
 							<input type="submit"  value="查找"/>
 						</form>
 					</div>
@@ -82,7 +82,7 @@ else{
 					<i> </i>
 					<div class="s-bar">
 						<form action="people.php" method="get">
-							<input type="text" name="booknumber" value="请输入书号查找借阅人" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入书号查找借阅人';}">
+							<input type="text" name="booknumber" placeholder="请输入书号查找借阅人" onBlur="if(this.placeholder=='')this.placeholder='请输入书号查找借阅人'" onFocus="if(this.placeholder=='请输入书号查找借阅人')this.placeholder=''">
 							<input type="submit"  value="查找"/>
 						</form>
 					</div>
