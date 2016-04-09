@@ -69,6 +69,22 @@ else{
 			margin: 0 5px;
 			float: left;
 		}
+		a.astyle:link {
+			color: #fff;
+			text-decoration: none
+		}
+		a.astyle:visited {
+			color: #fff;
+			text-decoration: none
+		}
+		a.astyle:hover {
+			color: #fff;
+			text-decoration: none
+		}
+		a.astyle:active {
+			color: #fff;
+			text-decoration: none
+		}
 	</style>
 </head>
 <body>
@@ -112,7 +128,7 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
-	content += '<button class="btn btn-xs btn-info"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<a href="'+record.booknumber+'.html" style="color: #fff;a:hover,a.hover:color: #fff;text-decoration: none;">查看简介和评论</a></button>';
+	content += '<button class="btn btn-xs btn-info"><i class="fa fa-comment-o"></i>&nbsp;<a class="astyle" href="'+record.booknumber+'.html">查看简介和评论</a></button>';
 	return content;
 }}
 ];
