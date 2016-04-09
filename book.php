@@ -106,7 +106,7 @@ else{
 }
 ?>
 var dtGridColumns_2_1_2 = [
-{id:'booknumber', title:'书号', type:'string', columnClass:'text-center'},
+{id:'booknumber', title:'书号', type:'string', columnClass:'text-center',hideType:'xs'},
 {id:'bookname', title:'书名', type:'string', columnClass:'text-center'},
 {id:'author', title:'作者', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
