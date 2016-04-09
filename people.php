@@ -21,7 +21,7 @@ if($sql==false){
 } 
 else{
 	$res=mysql_fetch_array($sql);
-?>
+	?>
 	<!doctype html>
 	<html>
 	<head>
@@ -59,35 +59,52 @@ else{
 	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
-		<style type="text/css">
+	<style type="text/css">
 		html, body {
-            margin: 0;
-            padding: 0;
-            background-color: #F2F2F2;
-            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-        }
-			.menu > li{
-				width: 25%;
-			}
-			a:hover, a:focus {
+			margin: 0;
+			padding: 0;
+			background-color: #F2F2F2;
+			font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		}
+		.menu > li{
+			width: 25%;
+		}
+		a:hover, a:focus {
 			color: #c9376e !important; 
 			text-decoration: none;
-			}
-			form{
-				padding: 0;
-				margin: 0 5px;
-				float: left;
-			}
-		</style>
-	</head>
-	<body>
-		<ul class="menu boxed clearfix">
-			<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
-			<li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
-			<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
-			<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
-		</ul>
-		<script type="text/javascript">
+		}
+		form{
+			padding: 0;
+			margin: 0 5px;
+			float: left;
+		}
+		.fa-fw {
+			width: 1.28571429em;
+			text-align: center;
+		}
+		.fa-li {
+			position: absolute;
+			left: -2.14285714em;
+			width: 2.14285714em;
+			top: 0.14285714em;
+			text-align: center;
+		}
+		.fa-stack-2x {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu boxed clearfix">
+		<li><a href="index.php"><i class="menu-icon menu-icon-1"></i>首页</a></li>
+		<li><a href="control.php"><i class="menu-icon menu-icon-4"></i>管理</a></li>
+		<li><a href="info.php"><i class="menu-icon menu-icon-9"></i>借阅登记</a></li>
+		<li><a href="add.php"><i class="menu-icon menu-icon-9"></i>添加书籍</a></li>
+	</ul>
+	<script type="text/javascript">
 	//映射内容
 	var status1 = {0:'未归还', 1:'已归还'};
 	var datas = new Array();
@@ -123,12 +140,12 @@ var dtGridColumns_2_1_2 = [
 	return content;
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
-			 			var content = '';
-			 			content += '<form action="peoplechange.php" method="post"><input type="hidden" name="studentname" value="'+record.studentname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="studentnumber" value="'+record.studentnumber+'"/><input type="hidden" name="phonenumber" value="'+record.phonenumber+'"/><input type="hidden" name="roomnumber" value="'+record.roomnumber+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
-			 			content += '&nbsp;&nbsp;';
-			 			content += '<form action="peopledel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
-			 			return content;
-			 		}}
+	var content = '';
+	content += '<form action="peoplechange.php" method="post"><input type="hidden" name="studentname" value="'+record.studentname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="studentnumber" value="'+record.studentnumber+'"/><input type="hidden" name="phonenumber" value="'+record.phonenumber+'"/><input type="hidden" name="roomnumber" value="'+record.roomnumber+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
+	content += '&nbsp;&nbsp;';
+	content += '<form action="peopledel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+	return content;
+}}
 
 ];
 var dtGridOption_2_1_2 = {
@@ -149,7 +166,7 @@ $(function(){
 });
 </script>
 <p><h4>搜索结果：<h4></p>
-<div id="dtGridContainer_2_1_2" class="dt-grid-container" style="text-align: center;"></div>
+<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>

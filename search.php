@@ -52,11 +52,11 @@ else{
 
 	<style type="text/css">
 		html, body {
-            margin: 0;
-            padding: 0;
-            background-color: #F2F2F2;
-            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-        }
+			margin: 0;
+			padding: 0;
+			background-color: #F2F2F2;
+			font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		}
 		a:hover, a:focus {
 			color: #c9376e !important; 
 			text-decoration: none;
@@ -65,10 +65,27 @@ else{
 			width: 20%;
 		}
 		form{
-				padding: 0;
-				margin: 0 5px;
-				float: left;
-			}
+			padding: 0;
+			margin: 0 5px;
+			float: left;
+		}
+		.fa-fw {
+			width: 1.28571429em;
+			text-align: center;
+		}
+		.fa-li {
+			position: absolute;
+			left: -2.14285714em;
+			width: 2.14285714em;
+			top: 0.14285714em;
+			text-align: center;
+		}
+		.fa-stack-2x {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -111,10 +128,10 @@ var dtGridColumns_2_1_2 = [
 	return content;
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
-			 			var content = '';
-			 			content += '<form action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-info" type="submit"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';
-			 			return content;
-			 		}}
+	var content = '';
+	content += '<form action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-info" type="submit"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';
+	return content;
+}}
 ];
 var dtGridOption_2_1_2 = {
 	lang : 'zh-cn',
@@ -134,7 +151,7 @@ $(function(){
 });
 </script>
 <p><h4>搜索结果：<h4></p>
-<div id="dtGridContainer_2_1_2" class="dt-grid-container" style="text-align: center;"></div>
+<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>

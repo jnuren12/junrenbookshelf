@@ -60,12 +60,12 @@ else{
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 	<style type="text/css">
-	html, body {
-            margin: 0;
-            padding: 0;
-            background-color: #F2F2F2;
-            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-        }
+		html, body {
+			margin: 0;
+			padding: 0;
+			background-color: #F2F2F2;
+			font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		}
 		.menu > li{
 			width: 25%;
 		}
@@ -74,10 +74,27 @@ else{
 			text-decoration: none;
 		}
 		form{
-				padding: 0;
-				margin: 0 5px;
-				float: left;
-			}
+			padding: 0;
+			margin: 0 5px;
+			float: left;
+		}
+		.fa-fw {
+			width: 1.28571429em;
+			text-align: center;
+		}
+		.fa-li {
+			position: absolute;
+			left: -2.14285714em;
+			width: 2.14285714em;
+			top: 0.14285714em;
+			text-align: center;
+		}
+		.fa-stack-2x {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -120,12 +137,12 @@ var dtGridColumns_2_1_2 = [
 	return content;
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
-			 			var content = '';
-			 			content += '<form action="bookchange.php" method="post"><input type="hidden" name="bookname" value="'+record.bookname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="author" value="'+record.author+'"/><input type="hidden" name="type" value="'+record.type1.toString()+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
-			 			content += '&nbsp;&nbsp;';
-			 			content += '<form action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
-			 			return content;
-			 		}}
+	var content = '';
+	content += '<form action="bookchange.php" method="post"><input type="hidden" name="bookname" value="'+record.bookname+'"/><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><input type="hidden" name="author" value="'+record.author+'"/><input type="hidden" name="type" value="'+record.type1.toString()+'"/><input type="hidden" name="status" value="'+record.status1.toString()+'"/><button class="btn btn-xs btn-default" type="submit"><i class="fa fa-edit"></i>&nbsp;&nbsp;编辑</button></form>';
+	content += '&nbsp;&nbsp;';
+	content += '<form action="bookdel.php" method="post"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+	return content;
+}}
 
 ];
 var dtGridOption_2_1_2 = {
@@ -146,7 +163,7 @@ $(function(){
 });
 </script>
 <p><h4>搜索结果：<h4></p>
-<div id="dtGridContainer_2_1_2" class="dt-grid-container" style="text-align: center;"></div>
+<div id="dtGridContainer_2_1_2" class="dt-grid-container"></div>
 <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
 </body>
 </html>
