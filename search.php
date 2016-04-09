@@ -112,7 +112,7 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
-	content += '<button class="btn btn-xs btn-info" onClick="window.location.reload(\''+record.booknumber+'.html\');"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;查看简介和评论</button>';
+	content += '<button class="btn btn-xs btn-info"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;<a href="'+record.booknumber+'.html">查看简介和评论</a></button>';
 	return content;
 }}
 ];
