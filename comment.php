@@ -22,7 +22,7 @@ else{
         <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
         <title>评论<?php echo $_GET["booknumber"];?></title>
         <link href="css/menu.css" media="screen" rel="stylesheet">
-        <link rel="stylesheet" href="jss/trumbowyg/design/css/trumbowyg.css">
+        <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <!-- jQuery -->
@@ -153,12 +153,12 @@ $(function(){
         <input class="info" type="submit"/ value="提交">
     </form>
 </div>
-<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="jss/trumbowyg/trumbowyg.min.js"></script>
-<script src="jss/trumbowyg/langs/fr.js"></script>
-<script src="jss/trumbowyg/plugins/upload/trumbowyg.upload.js"></script>
-<script src="jss/trumbowyg/plugins/base64/trumbowyg.base64.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>
+<script src="jss/dist/trumbowyg.min.js"></script>
+<script src="jss/dist/langs/fr.min.js"></script>
+<script src="jss/dist/plugins/upload/trumbowyg.upload.js"></script>
+<script src="jss/dist/plugins/base64/trumbowyg.base64.js"></script>
 <script>
     /** Default editor configuration **/
     $('#simple-editor').trumbowyg();
