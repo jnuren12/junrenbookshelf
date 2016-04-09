@@ -114,6 +114,7 @@ else{
         comment.email = '".$res['email']."';
         comment.comment = '".$res['comment']."';
         comment.time = '".$res['time']."';
+        comment.id1 = '".$res['id']."';
         datas.push(comment);
         ";
     }while($res=mysql_fetch_array($sql));
@@ -123,7 +124,13 @@ var dtGridColumns_2_1_2 = [
 {id:'username', title:'姓名', type:'string', columnClass:'text-center', hideType:'xs'},
 {id:'email', title:'邮箱', type:'string', columnClass:'text-center', hideType:'md|sm|xs'},
 {id:'comment', title:'评论', type:'string', columnClass:'text-center'},
-{id:'time', title:'反馈时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'}
+{id:'time1', title:'反馈时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'sm|xs'},
+{id:'id1', title:'ID', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'lg|md|sm|xs'},
+{id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
+    var content = '';
+    content += '<form class="formname" action="contactdel.php" method="post"><input type="hidden" name="id" value="'+record.id1+'"/><button class="btn btn-xs btn-danger" type="submit" onClick="delcfm()"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;删除</button></form>';
+    return content;
+}}
 ];
 var dtGridOption_2_1_2 = {
     lang : 'zh-cn',
