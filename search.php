@@ -64,27 +64,10 @@ else{
 		.menu > li{
 			width: 20%;
 		}
-		form{
+		.formname{
 			padding: 0;
 			margin: 0 5px;
 			float: left;
-		}
-		.fa-fw {
-			width: 1.28571429em;
-			text-align: center;
-		}
-		.fa-li {
-			position: absolute;
-			left: -2.14285714em;
-			width: 2.14285714em;
-			top: 0.14285714em;
-			text-align: center;
-		}
-		.fa-stack-2x {
-			position: absolute;
-			left: 0;
-			width: 100%;
-			text-align: center;
 		}
 	</style>
 </head>
@@ -129,7 +112,7 @@ var dtGridColumns_2_1_2 = [
 }},
 {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
-	content += '<form action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-info" type="submit"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';
+	content += '<form class="formname" action="comment.php" method="get"><input type="hidden" name="booknumber" value="'+record.booknumber+'"/><button class="btn btn-xs btn-info" type="submit"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;查看简介和评论</button></form>';
 	return content;
 }}
 ];
