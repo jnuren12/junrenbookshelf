@@ -64,6 +64,11 @@ else{
 		.menu > li{
 			width: 20%;
 		}
+		form{
+				padding: 0;
+				margin: 0 5px;
+				float: left;
+			}
 	</style>
 </head>
 <body>
