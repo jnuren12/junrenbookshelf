@@ -14,7 +14,7 @@ if($_POST){
             include("connection.php");
             $sql = mysql_query("INSERT into contact(username,email,comment) values('$username','$email','$comment')");//执行插入语句
             if($sql){
-                echo "<script>alert('评论成功');history.go(-1);</script>";
+                echo "<script>alert('反馈成功');history.go(-1);</script>";
             }
         }
         else{
