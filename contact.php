@@ -138,8 +138,7 @@
                         ico: 'insertImage'
                     }
                 },
-                btns: ['viewHTML',
-                '|', 'formatting',
+                btns: ['formatting',
                 '|', 'btnGrp-test',
                 '|', 'align',
                 '|', 'btnGrp-lists',
@@ -148,7 +147,7 @@
              /** Simple customization with current options **/
              $('#form-content').trumbowyg({
                 lang: 'fr',
-                closable: true,
+                closable: false,
                 mobile: true,
                 fixedBtnPane: true,
                 fixedFullWidth: true,
