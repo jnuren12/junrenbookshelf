@@ -137,10 +137,10 @@ var dtGridColumns_2_1_2 = [
 {id:'bookname', title:'书名', type:'string', columnClass:'text-center', hideType:'xs'},
 {id:'comment', title:'评论', type:'string', columnClass:'text-center'},
 {id:'time', title:'评论时间', type:'date', format:'yyyy-MM-dd hh:mm:ss', columnClass:'text-center',hideType:'xs'},
-{id:'id1', title:'ID', type:'int',columnClass:'text-center',hideType:'lg|md|sm|xs'},
 <?php
 if($T){
-    echo "{id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
+    echo "{id:'id1', title:'ID', type:'int',columnClass:'text-center',hideType:'lg|md|sm|xs'},
+    {id:'operation', title:'操作', type:'string', columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
         var content = '';
         content += '<form class=\"formname\" action=\"commentdel.php\" method=\"post\"><input type=\"hidden\" name=\"id\" value=\"'+record.id1+'\"/><button class=\"btn btn-xs btn-danger\" type=\"submit\" onClick=\"delcfm()\"><i class=\"fa fa-trash-o\"></i>&nbsp;&nbsp;删除</button></form>';
         return content;
@@ -175,9 +175,9 @@ $(function(){
 <p>
   <?php
   if($status==1)
-      echo "<span style=\"background:#00a2ca;padding:2px 10px;color:white;\">可借阅</span>";
+      echo "<span style=\"background:#00a2ca;padding:2px 10px;margin:0 0 10px 0;color:white;\">可借阅</span>";
   else
-      echo "<span style=\"background:#c447ae;padding:2px 10px;color:white;\">已借出</span>";
+      echo "<span style=\"background:#c447ae;padding:2px 10px;margin:0 0 10px 0;color:white;\">已借出</span>";
   ?>
   <h4>读者评论：<h4>
   </p>
