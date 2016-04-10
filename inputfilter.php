@@ -20,4 +20,20 @@ function _safe($str){
     $str = preg_replace($style_string, $style_clear, $str);
     return $str;
 }
+function commentsafe($str){
+    $html_string = array(" ","\t", "\r");
+    $html_clear = array("&nbsp;","&nbsp; &nbsp; ", "");
+    $js_string = array("/<script(.*)<\/script>/isU");
+    $js_clear = array("");
+    $frame_string = array("/<frame(.*)>/isU", "/<\/fram(.*)>/isU", "/<iframe(.*)>/isU", "/<\/ifram(.*)>/isU",);
+    $frame_clear = array("", "", "", "");
+    $str = trim($str);
+    //过滤字符串
+    $str = str_replace($html_string, $html_clear, $str);
+    //过滤JS
+    $str = preg_replace($js_string, $js_clear, $str);
+    //过滤ifram
+    $str = preg_replace($frame_string, $frame_clear, $str);
+    return $str;
+}
 ?>
