@@ -20,5 +20,4 @@ function _safe($str){
     $str = preg_replace($style_string, $style_clear, $str);
     return $str;
 }
-
 ?>

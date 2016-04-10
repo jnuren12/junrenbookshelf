@@ -2,7 +2,7 @@
 header("Content-type: text/html; charset=utf-8"); 
 include("inputfilter.php");
 if($_POST){
-    $comment=$_POST["comment"];
+    $comment=_safe($_POST["comment"]);
     $username=_safe($_POST["username"]);
     $email=_safe($_POST["email"]);
     if ($comment == ""||$username == ""||$email == ""){

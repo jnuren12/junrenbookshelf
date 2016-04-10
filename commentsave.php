@@ -1,7 +1,8 @@
 <?php
-    header("Content-type: text/html; charset=utf-8"); 
+    header("Content-type: text/html; charset=utf-8");
+    include("inputfilter.php"); 
     if($_POST){
-    	$comment=$_POST["comment"];
+    	$comment=_safe($_POST["comment"]);
     	$booknumber=$_POST["booknumber"];
     	if ($comment == ""){
             echo "<script>alert('请填写评论！');history.go(-1);</script>"; 
