@@ -161,7 +161,6 @@ $(function(){
 <script src="jss/dist/plugins/base64/trumbowyg.base64.js"></script>
 <script>
     /** Default editor configuration **/
-    $('#simple-editor').trumbowyg();
             /********************************************************
              * Customized button pane + buttons groups + dropdowns
              * Use upload plugin
@@ -177,27 +176,6 @@ $(function(){
                     align: 'Alignement',
                     image: 'Image'
                 }
-            });
-             $('#customized-buttonpane').trumbowyg({
-                lang: 'fr',
-                closable: true,
-                fixedBtnPane: true,
-                btnsDef: {
-                    // Customizables dropdowns
-                    align: {
-                        dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-                        ico: 'justifyLeft'
-                    },
-                    image: {
-                        dropdown: ['insertImage', 'upload', 'base64'],
-                        ico: 'insertImage'
-                    }
-                },
-                btns: ['formatting',
-                '|', 'btnGrp-test',
-                '|', 'align',
-                '|', 'btnGrp-lists',
-                '|', 'image']
             });
              /** Simple customization with current options **/
              $('#form-content').trumbowyg({
