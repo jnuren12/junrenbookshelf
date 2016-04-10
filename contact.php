@@ -94,7 +94,7 @@
           <span class="input-group-addon">@</span>
           <input name="email" type="text" class="form-control" placeholder="your email">
       </div>
-      <textarea id="form-content" class="editor" name="comment" cols="30" rows="10"><p>I want ot say ~</p></textarea>
+      <textarea id="form-content" class="editor" name="comment" cols="30" rows="10"onfocus="if(value=='<p>I want ot say ~</p>'){value=''}" onblur="if (value ==''){value='<p>I want ot say ~</p>'}"><p>I want ot say ~</p></textarea>
     <input class="info" type="submit"/ value="提交">
 </form>
 </div>
