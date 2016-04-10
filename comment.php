@@ -175,9 +175,9 @@ $(function(){
 <p>
   <?php
   if($status==1)
-      echo "<span style=\"background:#00a2ca;padding:2px 10px;margin:0 0 10px 0;color:white;\">可借阅</span>";
+      echo "<span style=\"background:#00a2ca;padding:2px 10px;margin:0 0 20px 0;color:white;\">可借阅</span>";
   else
-      echo "<span style=\"background:#c447ae;padding:2px 10px;margin:0 0 10px 0;color:white;\">已借出</span>";
+      echo "<span style=\"background:#c447ae;padding:2px 10px;margin:0 0 20px 0;color:white;\">已借出</span>";
   ?>
   <h4>读者评论：<h4>
   </p>
