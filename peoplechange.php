@@ -53,6 +53,9 @@ if($_POST){
     .login-page{
     background: none;
   }
+  a:hover{
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>

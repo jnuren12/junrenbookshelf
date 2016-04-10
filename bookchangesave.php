@@ -1,7 +1,7 @@
 <?php 
     header("Content-type: text/html; charset=utf-8"); 
     include("inputfilter.php");
-    if($_POST['booksave']){
+    if($_POST){
         $bookname=_safe($_POST["bookname"]);
         $booknumber=_safe($_POST["booknumber"]);
         $author=_safe($_POST["author"]);

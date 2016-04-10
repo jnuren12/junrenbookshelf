@@ -9,7 +9,7 @@
         $booknumber=_safe($_POST["booknumber"]);
         $status=$_POST["status"];
         $id=$_POST["id"];
-    	if ($studentname == "" || $studentnumber == "" || $roomnumber== "" || $booknumber == "" || $phonenumber == "" || $statusnumber == ""){
+    	if ($studentname == "" || $studentnumber == "" || $roomnumber== "" || $booknumber == "" || $phonenumber == "" || $status == ""|| $id == ""){
             echo "<script>alert('请确认信息完整！');history.go(-1);</script>"; 
         }
     	else

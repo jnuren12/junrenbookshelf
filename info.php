@@ -43,6 +43,9 @@ else{
   .menu > li{
     width: 25%;
   }
+  a:hover{
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
