@@ -209,7 +209,23 @@ $(function(){
                 semantic: true,
                 resetCss: true,
                 autoAjustHeight: true,
-                autogrow: true
+                autogrow: true,
+                btnsDef: {
+                    // Customizables dropdowns
+                    align: {
+                        dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                        ico: 'justifyLeft'
+                    },
+                    image: {
+                        dropdown: ['insertImage', 'upload', 'base64'],
+                        ico: 'insertImage'
+                    }
+                },
+                btns: ['formatting',
+                '|', 'btnGrp-test',
+                '|', 'align',
+                '|', 'btnGrp-lists',
+                '|', 'image']
             });
              $('.editor').on('dblclick', function(e){
                 $(this).trumbowyg({
