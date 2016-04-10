@@ -186,7 +186,7 @@ $(function(){
   <div id="main" role="main">
     <form action="commentsave.php" method="post">
         <input type="hidden" name="booknumber" value="<?php echo $_GET["booknumber"];?>">
-        <textarea id="form-content" class="editor" name="comment" cols="30" rows="10" onfocus="if(value=='<p>评价一下这本书吧 ~</p>'){value=''}" onblur="if (value ==''){value='<p>评价一下这本书吧 ~</p>'}"><p>评价一下这本书吧 ~</p></textarea>
+        <textarea id="form-content" class="editor" name="comment" cols="30" rows="10" onfocus="if(value=='评价一下这本书吧 ~'){value=''}" onblur="if (value ==''){value='评价一下这本书吧 ~'}">评价一下这本书吧 ~</textarea>
         <input class="info" type="submit"/ value="提交">
     </form>
 </div>
