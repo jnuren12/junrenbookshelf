@@ -81,7 +81,7 @@ if($_POST){
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-star"></i>
               </div>
               <input type="text" class="form-control" name="studentnumber" id="username" value="<?php echo $studentnumber;?>" placeholder="学号" autocomplete="off"/>
             </div>
@@ -89,7 +89,7 @@ if($_POST){
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-university"></i>
               </div>
               <input type="text" class="form-control" name="roomnumber" id="username" value="<?php echo $roomnumber;?>" placeholder="宿舍" autocomplete="off"/>
             </div>
@@ -97,7 +97,7 @@ if($_POST){
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-phone"></i>
               </div>
               <input type="text" class="form-control" name="phonenumber" id="username" value="<?php echo $phonenumber;?>" placeholder="电话" autocomplete="off"/>
             </div>
@@ -105,7 +105,7 @@ if($_POST){
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-bookmark"></i>
               </div>
               <input type="text" class="form-control" name="booknumber" id="username" value="<?php echo $booknumber;?>" placeholder="书号" autocomplete="off"/>
             </div>
@@ -114,7 +114,7 @@ if($_POST){
           <input type="hidden" name="id" value="<?php echo $id;?>">
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block btn-login">
-              <i class="fa fa-sign-in"></i>
+              <i class="fa fa-edit"></i>
               修改
             </button>
           </div>

@@ -71,7 +71,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-star"></i>
               </div>
               <input type="text" class="form-control" name="studentnumber" id="username" placeholder="学号" autocomplete="off"/>
             </div>
@@ -79,7 +79,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-university"></i>
               </div>
               <input type="text" class="form-control" name="roomnumber" id="username" placeholder="宿舍" autocomplete="off"/>
             </div>
@@ -87,7 +87,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-phone"></i>
               </div>
               <input type="text" class="form-control" name="phonenumber" id="username" placeholder="电话" autocomplete="off"/>
             </div>
@@ -95,14 +95,14 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-bookmark"></i>
               </div>
               <input type="text" class="form-control" name="booknumber" id="username" placeholder="书号" autocomplete="off"/>
             </div>
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block btn-login">
-              <i class="fa fa-sign-in"></i>
+              <i class="fa fa-save"></i>
               登记
             </button>
           </div>

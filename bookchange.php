@@ -63,7 +63,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-book"></i>
             </div>
             <input type="text" class="form-control" name="bookname" id="username" value="<?php echo $_POST['bookname'];?>" placeholder="书名" autocomplete="off"/>
         </div>
@@ -71,7 +71,7 @@ else{
     <div class="form-group">
         <div class="input-group">
           <div class="input-group-addon">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-bookmark"></i>
         </div>
         <input type="text" class="form-control" name="booknumber" id="username" value="<?php echo $_POST['booknumber'];?>" placeholder="书号" autocomplete="off"/>
     </div>
@@ -79,7 +79,7 @@ else{
 <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon">
-        <i class="fa fa-user"></i>
+        <i class="fa fa-pencil"></i>
     </div>
     <input type="text" class="form-control" name="author" id="username" value="<?php echo $_POST['author'];?>" placeholder="作者" autocomplete="off"/>
 </div>
@@ -87,7 +87,7 @@ else{
 <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon">
-        <i class="fa fa-user"></i>
+        <i class="fa fa-tags"></i>
     </div>
     <input type="text" class="form-control" name="type" id="username" value="<?php echo $_POST['type'];?>" placeholder="类别" autocomplete="off"/>
 </div>
@@ -95,8 +95,8 @@ else{
 <input type="hidden" class="form-control" name="status" value="<?php echo $_POST['status'];?>"/>
 <div class="form-group">
     <button type="submit" class="btn btn-primary btn-block btn-login">
-      <i class="fa fa-sign-in"></i>
-      保存
+      <i class="fa fa-edit"></i>
+      修改
   </button>
 </div>
 <!-- Implemented in v1.1.4 --> 

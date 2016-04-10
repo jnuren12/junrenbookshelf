@@ -63,7 +63,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-book"></i>
               </div>
               <input type="text" class="form-control" name="bookname" id="username" placeholder="书名" autocomplete="off"/>
             </div>
@@ -71,7 +71,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-bookmark"></i>
               </div>
               <input type="text" class="form-control" name="booknumber" id="username" placeholder="书号" autocomplete="off"/>
             </div>
@@ -79,7 +79,7 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-pencil"></i>
               </div>
               <input type="text" class="form-control" name="author" id="username" placeholder="作者" autocomplete="off"/>
             </div>
@@ -87,14 +87,14 @@ else{
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-tags"></i>
               </div>
               <input type="text" class="form-control" name="type" id="username" placeholder="类别" autocomplete="off"/>
             </div>
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block btn-login">
-              <i class="fa fa-sign-in"></i>
+              <i class="fa fa-save"></i>
               添加
             </button>
           </div>
