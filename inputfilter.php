@@ -21,9 +21,8 @@ function _safe($str){
     return $str;
 }
 function commentsafe($str){
-    $html_string = array(" ","\t", "\r","
-        ");
-    $html_clear = array("&nbsp;","&nbsp; &nbsp; ", "", "<br/>");
+    $html_string = array(" ","\n", "\t", "\r");
+    $html_clear = array("&nbsp;","<br/>", "&nbsp; &nbsp; ", "");
     $js_string = array("/<script(.*)<\/script>/isU");
     $js_clear = array("");
     $frame_string = array("/<frame(.*)>/isU", "/<\/fram(.*)>/isU", "/<iframe(.*)>/isU", "/<\/ifram(.*)>/isU",);
