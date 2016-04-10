@@ -81,19 +81,21 @@ body {
   -moz-border-radius:0px 5px 5px 0px;
   -o-border-radius:0px 5px 5px 0px;
   margin: 0px 0px 0px -4px;
-  background:#7ac209;
+  background:#3b5998;
   cursor:pointer;
   border: none;
   outline: none;
   -webkit-appearance: none;
   background: #7ac209;
-  background: -moz-linear-gradient(top, #7ac209 0%, #7ac209 37%, #7ac209 66%, #7ac209 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7ac209), color-stop(37%,#7ac209), color-stop(66%,#7ac209), color-stop(100%,#7ac209));
-  background: -webkit-linear-gradient(top, #7ac209 0%,#7ac209 37%,#7ac209 66%,#7ac209 100%);
-  background: -o-linear-gradient(top, #7ac209 0%,#7ac209 37%,#7ac209 66%,#7ac209 100%);
-  background: -ms-linear-gradient(top, #7ac209 0%,#7ac209 37%,#7ac209 66%,#7ac209 100%);
+  background: #337ab7;
+  background: -moz-linear-gradient(top, #337ab7 0%, #337ab7 37%, #337ab7 66%, #337ab7 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#337ab7), color-stop(37%,#337ab7), color-stop(66%,#337ab7), color-stop(100%,#337ab7));
+  background: -webkit-linear-gradient(top, #337ab7 0%,#337ab7 37%,#337ab7 66%,#337ab7 100%);
+  background: -o-linear-gradient(top, #337ab7 0%,#337ab7 37%,#337ab7 66%,#337ab7 100%);
+  background: -ms-linear-gradient(top, #337ab7 0%,#337ab7 37%,#337ab7 66%,#337ab7 100%);
   background: linear-gradient(to bottom, #8EDB15 0%,#8EDB15 37%,#8EDB15 66%,#8EDB15 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ac209', endColorstr='#7ac209',GradientType=0 );
+  background: linear-gradient(to bottom, #337ab7 0%,#337ab7 37%,#337ab7 66%,#337ab7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#337ab7', endColorstr='#337ab7',GradientType=0 );
 }
 .s-bar input[type="submit"]:hover{
 	opacity: 0.8;
