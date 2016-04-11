@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/menu.css" media="screen" rel="stylesheet">
     <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
-    <script src="js/jquery-ui.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <link href="jss/dependents/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="jss/dependents/jquery/jquery.min.js"></script>
     <script src="jss/dependents/bootstrap/js/bootstrap.min.js"></script>

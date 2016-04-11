@@ -35,7 +35,7 @@ else{
 		<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
 		<link href="css/menu.css" media="screen" rel="stylesheet">
 		<script src="js/jquery-1.10.2.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 		<!-- jQuery -->
 		<script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
 		<!-- bootstrap -->

@@ -24,7 +24,7 @@ else{
 	<link href="css/menu.css" media="screen" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 	<style type="text/css">
 	@viewport{
        width: extend-to-zoom 100%;
