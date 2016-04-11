@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
     <title>联系我们</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/menu.css" media="screen" rel="stylesheet">
     <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
     <script src="js/jquery-ui.min.js"></script>
@@ -87,14 +88,14 @@
     </p>
     <form action="contactsave.php" method="post">
         <div class="input-group input-group-lg">
-          <span class="input-group-addon">name</span>
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
           <input name="username" type="text" class="form-control" placeholder="your name">
       </div>
       <div class="input-group input-group-lg">
-          <span class="input-group-addon">@</span>
+          <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
           <input name="email" type="text" class="form-control" placeholder="your email">
       </div>
-      <textarea id="form-content" class="editor" name="comment" cols="30" rows="10"onfocus="if(value=='I want ot say ~'){value=''}" onblur="if (value ==''){value='I want ot say ~'}">I want ot say ~</textarea>
+      <textarea id="form-content" class="editor" name="comment" cols="30" rows="10"onfocus="if(value=='I want ot say ~'){value=''}" onblur="if (value ==''){value='I want ot say ~'}">I want to say ~</textarea>
     <input class="info" type="submit"/ value="提交">
 </form>
 </div>
