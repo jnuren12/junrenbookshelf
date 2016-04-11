@@ -56,10 +56,6 @@ else{
 	<script type="text/javascript" src="../../../jss/i18n/en.js"></script>
 	<script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
-	<!-- datePicker -->
-	<script type="text/javascript" src="../../../jss/dependents/datePicker/WdatePicker.js" defer="defer"></script>
-	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/WdatePicker.css" />
-	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/datePicker/skin/default/datepicker.css" />
 	<style type="text/css">
 		html, body {
 			margin: 0;
