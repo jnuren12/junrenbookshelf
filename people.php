@@ -31,7 +31,7 @@ else{
 		<!--保持页面原有尺寸，将页面调整为设备的可视浏览器空间-->
 		<meta name="author" content="LY">
 		<title>借阅人管理</title>
-		<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css">
 		<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
 		<link href="css/menu.css" media="screen" rel="stylesheet">
 		<script src="js/jquery-1.10.2.min.js"></script>
