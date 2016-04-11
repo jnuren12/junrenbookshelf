@@ -33,7 +33,6 @@ else{
 		<title>借阅人管理</title>
 		<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
-		<!--<link rel="stylesheet" type="text/css" href="wlsj.css">-->
 		<link href="css/menu.css" media="screen" rel="stylesheet">
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>

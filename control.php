@@ -23,8 +23,6 @@ else{
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/menu.css" media="screen" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="wlsj.css">-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<style type="text/css">
@@ -91,8 +89,6 @@ else{
 			</div>
 		</div>
 	</div>    
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="wlsj.js"></script>
 </body>
 </html>

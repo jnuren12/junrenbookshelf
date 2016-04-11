@@ -9,14 +9,13 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
   <link href="css/menu.css" media="screen" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <style type="text/css">
     @viewport{
      width: extend-to-zoom 100%;
      zoom:1.0;
-   }/*等效于wlsj.html中meta/viewport声明*/
+   }
    body{
     background-image: url(images/5.jpg);
   }
@@ -66,8 +65,6 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="wlsj.js"></script>
 </body>
 </html>
