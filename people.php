@@ -33,7 +33,7 @@ else{
 		<title>借阅管理</title>
 		<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css">
 		<link href="css/menu.css" media="screen" rel="stylesheet">
-		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<!-- jQuery -->
 		<script type="text/javascript" src="../../../js/jquery.min.js"></script>

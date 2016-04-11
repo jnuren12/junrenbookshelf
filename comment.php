@@ -36,7 +36,7 @@ else{
         <title>评论<?php echo $_GET["booknumber"];?></title>
         <link href="css/menu.css" media="screen" rel="stylesheet">
         <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
-        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <!-- jQuery -->
         <script type="text/javascript" src="../../../js/jquery.min.js"></script>

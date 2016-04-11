@@ -32,7 +32,7 @@ else{
 		<meta name="author" content="LY">
 		<title>书籍管理</title>
 		<link href="css/menu.css" media="screen" rel="stylesheet">
-		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script src="js/js/jquery-ui.min.js"></script>
 		<!-- jQuery -->
 		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
@@ -106,10 +106,10 @@ var dtGridColumns_2_1_2 = [
 {id:'type1', title:'类型', type:'string', codeTable:type1, columnClass:'text-center', hideType:'sm|xs'},
 {id:'status1', title:'状态', type:'string', codeTable:status1, columnClass:'text-center', resolution:function(value, record, column, grid, dataNo, columnNo){
 	var content = '';
-	if(value==1){
-		content += '<span style="background:#00a2ca;padding:2px 10px;color:white;">可借阅</span>';
-	}else{
+	if(value==0){
 		content += '<span style="background:#c447ae;padding:2px 10px;color:white;">已借出</span>';
+	}else{
+		content += '<span style="background:#00a2ca;padding:2px 10px;color:white;">可借阅</span>';
 	}
 	return content;
 }},

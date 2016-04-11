@@ -24,7 +24,7 @@ else{
         <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
         <title>反馈管理</title>
         <link href="css/menu.css" media="screen" rel="stylesheet">
-        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <!-- jQuery -->
         <script type="text/javascript" src="../../../js/jquery.min.js"></script>

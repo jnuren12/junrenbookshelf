@@ -19,7 +19,7 @@ else{
     <meta name="viewport" content="width=device-width,initial=1.0" charset="utf-8" >
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/menu.css" media="screen" rel="stylesheet">
-    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css"/>
