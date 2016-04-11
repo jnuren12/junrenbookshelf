@@ -19,12 +19,11 @@ else{
 	<!--保持页面原有尺寸，将页面调整为设备的可视浏览器空间-->
 	<meta name="author" content="LY">
 	<title>网联书架管理</title>
-	<!--<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">-->
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/menu.css" media="screen" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css">
 	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<style type="text/css">
 	@viewport{
        width: extend-to-zoom 100%;
@@ -89,6 +88,6 @@ else{
 			</div>
 		</div>
 	</div>    
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

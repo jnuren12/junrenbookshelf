@@ -65,6 +65,6 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

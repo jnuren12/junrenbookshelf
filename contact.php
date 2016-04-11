@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/menu.css" media="screen" rel="stylesheet">
     <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
-    <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <link href="jss/dependents/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="jss/dependents/jquery/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="jss/dependents/bootstrap/js/bootstrap.min.js"></script>
     <style type="text/css">
         html, body {
@@ -99,8 +99,8 @@
     <input class="info" type="submit"/ value="提交">
 </form>
 </div>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 <script src="jss/dist/trumbowyg.min.js"></script>
 <script src="jss/dist/langs/zh_cn.min.js"></script>
 <script src="jss/dist/plugins/upload/trumbowyg.upload.js"></script>

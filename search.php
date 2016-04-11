@@ -21,32 +21,10 @@ else{
 		<meta name="author" content="LY">
 		<title>搜索结果</title>
 		<link href="css/menu.css" media="screen" rel="stylesheet">
-		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<!-- jQuery -->
-		<script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
-		<!-- bootstrap -->
-		<script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css" />
-<!--[if lt IE 9]>
-	<script src="../../../jss/dependents/bootstrap/plugins/ie/html5shiv.js"></script>
-	<script src="../../../jss/dependents/bootstrap/plugins/ie/respond.js"></script>
-	<![endif]-->
-<!--[if lt IE 8]>
-	<script src="../../../jss/dependents/bootstrap/plugins/ie/json2.js"></script>
-	<![endif]-->
-	<!-- font-awesome -->
-	<link rel="stylesheet" type="text/css" href="../../../jss/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
-	<!-- dtGrid -->
-	<script type="text/javascript" src="../../../jss/jquery.dtGrid.js"></script>
-	<script type="text/javascript" src="../../../jss/i18n/en.js"></script>
-	<script type="text/javascript" src="../../../jss/i18n/zh-cn.js"></script>
-	<link rel="stylesheet" type="text/css" href="../../../jss/jquery.dtGrid.css" />
-	<style type="text/css">
-		html, body {
-			margin: 0;
-			padding: 0;
-			background-color: #F2F2F2;
+		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
 			font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 		}
 		a:hover, a:focus {

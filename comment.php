@@ -37,9 +37,9 @@ else{
         <link href="css/menu.css" media="screen" rel="stylesheet">
         <link rel="stylesheet" href="jss/dist/ui/trumbowyg.min.css">
         <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
         <!-- jQuery -->
-        <script type="text/javascript" src="../../../jss/dependents/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../js/jquery.min.js"></script>
         <!-- bootstrap -->
         <script type="text/javascript" src="../../../jss/dependents/bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../../../jss/dependents/bootstrap/css/bootstrap.min.css" />
@@ -186,8 +186,8 @@ $(function(){
         <input class="info" type="submit"/ value="提交">
     </form>
 </div>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 <script src="jss/dist/trumbowyg.min.js"></script>
 <script src="jss/dist/langs/zh_cn.min.js"></script>
 <script src="jss/dist/plugins/upload/trumbowyg.upload.js"></script>
